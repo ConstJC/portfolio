@@ -278,19 +278,19 @@ export default function Testimonials() {
                   {pageItems.map((t) => (
                     <div
                       key={t.id}
-                      className="bg-card border border-border rounded-[14px] p-[26px] shadow-(--shadow-sm)"
+                      className="bg-card border border-border rounded-[14px] p-[26px] shadow-(--shadow-sm) flex flex-col"
                     >
-                      <div className="text-[0.78rem] text-yellow-500 tracking-[2px] mb-3.5">★★★★★</div>
-                      <p className="text-[0.85rem] text-text leading-[1.72] mb-5 italic">
-                        &ldquo;{t.quote}&rdquo;
+                      <div className="text-primary text-[2rem] font-black font-serif leading-none mb-4 tracking-tight">&ldquo;</div>
+                      <p className="text-[0.88rem] text-text leading-[1.78] mb-6 flex-1">
+                        {t.quote}
                       </p>
-                      <div className="flex items-center gap-2.5">
-                        <div className="w-9 h-9 rounded-full bg-[linear-gradient(135deg,var(--primary)_0%,var(--primary-hover)_100%)] flex items-center justify-center text-[0.78rem] font-extrabold text-white shrink-0">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-primary/20 border border-primary/25 flex items-center justify-center text-[0.75rem] font-extrabold text-primary shrink-0">
                           {t.initials}
                         </div>
                         <div>
-                          <div className="text-[0.83rem] font-bold text-text">{t.name}</div>
-                          <div className="text-[0.72rem] text-text3">{t.role}</div>
+                          <div className="text-[0.85rem] font-bold text-text">{t.name}</div>
+                          <div className="text-[0.73rem] text-text3">{t.role}</div>
                         </div>
                       </div>
                     </div>
