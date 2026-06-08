@@ -1,0 +1,23 @@
+[
+  {
+    "id": "maria-reyes",
+    "quote": "JC delivered our e-commerce platform ahead of schedule with GCash integration working flawlessly from day one. Communicative, reliable, and the UI looks stunning.",
+    "initials": "MR",
+    "name": "Maria Reyes",
+    "role": "CEO, ShopPinas · Cebu"
+  },
+  {
+    "id": "james-cruz",
+    "quote": "The analytics dashboard completely changed how we understand our data. Clean code, great communication at every step, and the design looks amazing.",
+    "initials": "JC",
+    "name": "James Cruz",
+    "role": "Co-founder, DataPilot · Remote"
+  },
+  {
+    "id": "ana-lim",
+    "quote": "Our learning platform has helped 500+ students this year. JC built something we're genuinely proud of — fast, beautiful, and rock-solid reliable.",
+    "initials": "AL",
+    "name": "Ana Lim",
+    "role": "Founder, LearnPH Academy"
+  }
+]

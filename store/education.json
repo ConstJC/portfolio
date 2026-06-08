@@ -1,0 +1,26 @@
+[
+  {
+    "id": "usc",
+    "institution": "University Of San Carlos",
+    "degree": "Certificate Of Computer Technology",
+    "period": "August 2022 – February 2025",
+    "initials": "USC",
+    "logoUrl": "/images/usc-logo.png"
+  },
+  {
+    "id": "pnp",
+    "institution": "Passarelles Numériques Philippines",
+    "degree": "Scholarship Program – IT Track",
+    "period": "August 2022 – February 2025",
+    "initials": "PN",
+    "logoUrl": "/images/pn-logo.png"
+  },
+  {
+    "id": "pnhs",
+    "institution": "Babag National High School",
+    "degree": "Junior To Senior High School",
+    "period": "June 2015 – March 2022",
+    "initials": "BNHS",
+    "logoUrl": "/images/bbnhs-logo.jpeg"
+  }
+]

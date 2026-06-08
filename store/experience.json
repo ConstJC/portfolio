@@ -1,0 +1,41 @@
+[
+  {
+    "id": "cody",
+    "role": "Software Engineer",
+    "org": "CODY Web Development Inc.",
+    "location": "Cebu, PH",
+    "period": "March 2025 — Present",
+    "type": "On-site",
+    "employment": "Full-time",
+    "status": "current",
+    "logoUrl": "/images/pc.png",
+    "description": "Building full-stack web and mobile applications using Next.js, NestJS, Flutter, and C#. Working with AI coding tools (Claude Code, Cursor, Codex) for accelerated development with proper planning, Prisma for DB management, and WebSockets for real-time features.",
+    "techs": ["Next.js", "NestJS", "Flutter", "C#", "Prisma", "WebSockets", "FCM"]
+  },
+  {
+    "id": "prince-retail",
+    "role": "Full Stack Developer (OJT)",
+    "org": "Prince Retail Group of Companies",
+    "location": "Cebu, PH",
+    "period": "Feb 2024 — Dec 2024",
+    "type": "On-site",
+    "employment": "Internship",
+    "status": "previous",
+    "logoUrl": "/images/prince-retail-logo.png",
+    "description": "10-month internship designing and developing internal systems including a Queuing System and Asset Management platform. Worked with C#, .NET Core, SQL Server, jQuery, SignalR for real-time updates, and Figma for UI design. Applied scalable DB architecture principles.",
+    "techs": ["C# .NET", "SQL Server", "SignalR", "jQuery", "Figma"]
+  },
+  {
+    "id": "usc",
+    "role": "Certificate of Computer Technology",
+    "org": "University of San Carlos - Talamban Campus",
+    "location": "Talamban Campus, Cebu",
+    "period": "Aug 2022 — Feb 2025",
+    "type": "On-site",
+    "employment": "Student",
+    "status": "earlier",
+    "logoUrl": "/images/usc-logo.png",
+    "description": "Major in Software Development. Capstone project: Paanakan sa Mandaue — a Clinic Management System covering admission, outpatient, billing, and patient records. Served as Team Lead and Full Stack Developer throughout the project lifecycle.",
+    "techs": ["PHP Native", "MySQL", "JavaScript", "Figma", "NOSQL", "HTML/CSS", "Java"]
+  }
+]

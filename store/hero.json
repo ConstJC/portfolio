@@ -1,0 +1,27 @@
+{
+  "pill": {
+    "icon": "🇵🇭",
+    "text": "Available for freelance · ",
+    "highlight": "Cebu City, Philippines"
+  },
+  "role": "Software Engineer & Full Stack Developer & AI   Specialist",
+  "headline": "Turn Your Vision",
+  "headlineAccent": "Into Reality",
+  "description": "Full Stack Developer crafting <strong>scalable web & mobile apps</strong> — from pixel-perfect frontends to robust APIs and real-time systems. Based in Cebu, PH.",
+  "cta": {
+    "primary": { "label": "View My Work", "href": "#projects" },
+    "secondary": { "label": "Get in Touch", "href": "#contact" }
+  },
+  "footnote": "Accepts GCash, Maya, bank transfer & PayPal · Remote-friendly",
+  "floatingTags": [
+    { "text": "Open to opportunities", "variant": "ft1" }
+  ],
+  "badge": "Available for freelance",
+  "photo": "/images/pc.png",
+  "techStack": ["Next.js", "NestJS", "React Native", "TypeScript", "C# .NET", "Tailwind CSS"],
+  "quickStats": [
+    { "value": "4+", "label": "Projects" },
+    { "value": "1yr+", "label": "Experience" },
+    { "value": "10+", "label": "Technologies" }
+  ]
+}

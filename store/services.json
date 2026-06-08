@@ -1,0 +1,38 @@
+[
+  {
+    "id": "web-design-dev",
+    "icon": "🎨",
+    "title": "Web Design & Development",
+    "description": "Modern, high-converting websites designed for businesses, startups, and personal brands. Responsive, fast, SEO-friendly, and built with React, Next.js, and TypeScript to deliver exceptional user experiences across all devices."
+  },
+  {
+    "id": "backend-systems",
+    "icon": "⚙️",
+    "title": "Backend & System Development",
+    "description": "Robust and scalable backend solutions using .NET, Node.js, NestJS, PostgreSQL, Supabase, and cloud technologies. Secure authentication, business logic, APIs, admin panels, and enterprise-grade architectures."
+  },
+  {
+    "id": "mobile-apps",
+    "icon": "📱",
+    "title": "Mobile App Development",
+    "description": "Cross-platform mobile applications for iOS and Android using React Native and Flutter. Delivering smooth performance, intuitive user experiences, and scalable mobile solutions from a single codebase."
+  },
+  {
+    "id": "ai-automation",
+    "icon": "🤖",
+    "title": "AI Automation & Workflows",
+    "description": "Automate repetitive business processes using n8n, AI agents, OpenAI, Claude, and custom integrations. Build intelligent workflows for lead generation, customer support, CRM updates, notifications, reporting, and business operations."
+  },
+  {
+    "id": "database-api",
+    "icon": "🗄️",
+    "title": "Database Architecture & API Integration",
+    "description": "Design scalable databases and secure APIs with PostgreSQL, Prisma, Supabase, SQL Server, and REST architecture. Includes third-party integrations, payment gateways, documentation, and system connectivity."
+  },
+  {
+    "id": "ui-ux-design",
+    "icon": "✨",
+    "title": "UI/UX Design & Prototyping",
+    "description": "Beautiful, user-focused interfaces crafted in Figma and transformed into pixel-perfect applications. Wireframing, design systems, interactive prototypes, and conversion-focused user experiences."
+  }
+]

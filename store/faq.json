@@ -1,0 +1,52 @@
+[
+  {
+    "id": "cost",
+    "question": "What does it cost to have a business website built?",
+    "answer": "Pricing depends on the scope and complexity of your project. I provide a clear and transparent quote after understanding your requirements."
+  },
+  {
+    "id": "timeline",
+    "question": "How long does it take to create a website?",
+    "answer": "Most projects take 1–4 weeks depending on the features and size. Larger or custom systems may take longer."
+  },
+  {
+    "id": "manage-site",
+    "question": "Can I manage my website myself?",
+    "answer": "Yes. I build websites with user-friendly interfaces so you can update content easily. I can also guide you if needed."
+  },
+  {
+    "id": "hosting-domain",
+    "question": "Is hosting and domain included?",
+    "answer": "Hosting and domain are usually separate, but I can help you set everything up or manage it for you."
+  },
+  {
+    "id": "support",
+    "question": "Do you provide support after launch?",
+    "answer": "Yes. I offer post-launch support for updates, fixes, and improvements to ensure your website runs smoothly."
+  },
+  {
+    "id": "specialize",
+    "question": "What do you specialize in?",
+    "answer": "I specialize in full-stack development, building modern web applications with strong backend systems using .NET or Node.js and scalable frontend technologies."
+  },
+  {
+    "id": "tech-stack",
+    "question": "What technologies do you use?",
+    "answer": "I primarily work with C# .NET and Node.js for backend development and TypeScript-based frameworks for building modern, responsive user interfaces."
+  },
+  {
+    "id": "work-style",
+    "question": "How do you approach projects?",
+    "answer": "I focus on understanding the problem first, then design and build solutions that are scalable, maintainable, and user-friendly. I keep communication clear and consistent throughout the process."
+  },
+  {
+    "id": "why-you",
+    "question": "Why should I work with you?",
+    "answer": "I combine clean design with solid engineering. My goal is not just to build a website, but to create a reliable system that supports your business long-term."
+  },
+  {
+    "id": "learn-next",
+    "question": "What do you want to learn next?",
+    "answer": "I want to deepen my knowledge in system design and scalable architecture, especially in backend systems. I’m also interested in integrating AI into applications, including AI automation workflows, and building more intelligent, data-driven systems."
+  }
+]

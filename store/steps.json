@@ -1,0 +1,20 @@
+[
+  {
+    "number": 1,
+    "eyebrow": "Step 1",
+    "title": "Discovery & Scoping",
+    "description": "We kick off with a free 30-minute call. I learn about your goals, users, and timeline — then send a detailed proposal with a fixed price in PHP."
+  },
+  {
+    "number": 2,
+    "eyebrow": "Step 2",
+    "title": "Design, Build & Iterate",
+    "description": "You get weekly progress updates and a staging link to review at every milestone. Full revision rounds included — no surprises."
+  },
+  {
+    "number": 3,
+    "eyebrow": "Step 3",
+    "title": "Launch & Ongoing Support",
+    "description": "I handle deployment, domain, and go-live. Every project includes 30 days of free post-launch support. Pay via GCash, Maya, or bank."
+  }
+]

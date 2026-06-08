@@ -1,0 +1,75 @@
+
+
+
+[
+  {
+    "id": "cct",
+    "question": "What do you mean by Certificate in Computer Technology?",
+    "answer": "It's a 3-year technical program focused on software development, covering core areas such as data structures, algorithms, database design, and application development. The program emphasized hands-on, project-based learning that prepared me for real-world engineering. My capstone project was a complete system built end-to-end."
+  },
+  {
+    "id": "specialize",
+    "question": "What field do you specialize in?",
+    "answer": "I specialize in full-stack application development, with a strong focus on building robust backend systems using C# .NET. Alongside that, I work with the TypeScript ecosystem to develop modern, responsive web applications that integrate seamlessly with backend services."
+  },
+  {
+    "id": "how-programming",
+    "question": "How did you come to know about programming?",
+    "answer": "I was introduced to programming in college through a basic course. What started as curiosity quickly turned into interest when I realized I could build systems that solve real problems. From there, I continued learning through hands-on projects and self-study."
+  },
+  {
+    "id": "think-programming",
+    "question": "What do you think of \"Programming\"?",
+    "answer": "Programming is structured problem-solving. It involves breaking complex problems into logical steps and building solutions that are reliable, scalable, and maintainable. It’s both a technical discipline and a creative process."
+  },
+  {
+    "id": "comfortable-tech",
+    "question": "What technologies are you most comfortable with?",
+    "answer": "I’m most comfortable working with C# .NET for backend and system-level development, and the TypeScript ecosystem for building modern web interfaces. I enjoy combining both to create complete, scalable applications."
+  },
+  {
+    "id": "frontend-backend-fullstack",
+    "question": "Do you work more on frontend, backend, or full stack?",
+    "answer": "I work full stack and enjoy both sides of development. I’m particularly interested in backend work where I can design business logic and build reliable systems, while also focusing on frontend development to create user-friendly interfaces and deliver a great user experience."
+  },
+  {
+    "id": "learn-next",
+    "question": "What do you want to learn next?",
+    "answer": "I want to deepen my knowledge in system design and scalable architecture, especially in backend systems. I’m also interested in integrating AI into applications, including AI automation workflows, and building more intelligent, data-driven systems."
+  },
+  {
+    "id": "favorite-part",
+    "question": "What's your favorite part about being a developer?",
+    "answer": "The most satisfying part is seeing a system come together — when the backend logic works as intended and the frontend reflects it seamlessly. Building something functional and reliable from scratch is always rewarding."
+  },
+  {
+    "id": "design-or-code",
+    "question": "Are you more into design or code — or both?",
+    "answer": "Both, but I approach design from a developer’s perspective. I value clean, structured interfaces and focus on implementing them efficiently in code while maintaining performance and clarity."
+  },
+  {
+    "id": "love-building",
+    "question": "What do you love building the most?",
+    "answer": "I enjoy building systems with meaningful business logic — applications that manage data, processes, and workflows. I find it rewarding to create solutions that are not only functional but also reliable and scalable."
+  },
+  {
+    "id": "learning-approach",
+    "question": "What's your approach to learning new things?",
+    "answer": "I learn best by building. I take a hands-on approach by applying new concepts in small projects, experimenting, debugging, and gradually forming a deeper understanding through experience."
+  },
+  {
+    "id": "why-excites",
+    "question": "Why does programming excite you?",
+    "answer": "Programming excites me because it allows me to turn ideas into working systems. There’s always a better way to solve a problem, and that constant improvement keeps the work engaging and challenging."
+  },
+  {
+    "id": "not-coding",
+    "question": "What do you do when you're not coding?",
+    "answer": "Outside of coding, I play basketball and spend time watching anime, as well as reading novels, manhwa, and manga. I enjoy stories with strong world-building and character development, which also helps keep my creativity active."
+  },
+  {
+    "id": "future-projects",
+    "question": "What kind of projects do you hope to work on in the future?",
+    "answer": "I aim to build scalable applications and eventually develop my own product that solves real-world problems. I’m particularly interested in systems that combine strong backend architecture with modern web technologies."
+  }
+]

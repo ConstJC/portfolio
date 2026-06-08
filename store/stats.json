@@ -1,0 +1,6 @@
+[
+  { "label": "projects", "value": "3+", "description": "Real-world apps built" },
+  { "label": "experience", "value": "1yr+", "description": "Professional dev work" },
+  { "label": "stack", "value": "10+", "description": "Technologies mastered" },
+  { "label": "ai tools", "value": "4+", "description": "AI tools in workflow" }
+]

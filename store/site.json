@@ -1,0 +1,21 @@
+{
+  "name": "Jay Clark Anore",
+  "handle": "JCode",
+  "initials": "JC",
+  "tagline": "Full-Stack Developer & Designer",
+  "location": "Cebu City, Philippines",
+  "locationFlag": "🇵🇭",
+  "email": "jc.anore09@gmail.com",
+  "availableForFreelance": true,
+  "currentEmployer": "CODY Web Dev",
+  "resumeUrl": "/resume.pdf",
+  "bookingUrl": "#",
+  "footerDescription": "Full Stack Developer based in Cebu, PH. Builds fast, scalable web and mobile apps using modern web tech and C# .NET. Focused on clean code, solid architecture, and great user experience.",
+  "copyright": "© 2025 JCode. All rights reserved.",
+  "socials": {
+    "facebook": "https://www.facebook.com/Jaye.gil28/",
+    "instagram": "https://www.instagram.com/itsmeee_clarkyy",
+    "github": "https://github.com/ClarkJaye/ClarkJaye",
+    "linkedin": "https://ph.linkedin.com/in/jay-clark-anore-69a920249?trk=people-guest_people_search-card"
+  }
+}

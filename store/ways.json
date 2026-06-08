@@ -1,0 +1,38 @@
+[
+  {
+    "icon": "🤖",
+    "tag": "AI",
+    "title": "AI Automation & Integrations",
+    "description": "Automate repetitive workflows and business processes using n8n, AI agents, OpenAI, CRM integrations, chatbots, notifications, and custom automation solutions."
+  },
+  {
+    "icon": "🎨",
+    "tag": "Design",
+    "title": "Web Design",
+    "description": "Modern, conversion-focused website designs that blend aesthetics, usability, and brand identity to create memorable digital experiences and drive business growth."
+  },
+  {
+    "icon": "🌐",
+    "tag": "Web Apps",
+    "title": "Full-Stack Web Development",
+    "description": "Custom web applications built with modern technologies, delivering exceptional performance, scalability, security, and maintainable architecture."
+  },
+  {
+    "icon": "📱",
+    "tag": "Mobile",
+    "title": "Mobile App Development",
+    "description": "Cross-platform mobile applications designed for seamless experiences across Android and iOS, with a focus on performance, reliability, and user engagement."
+  },
+  {
+    "icon": "🔧",
+    "tag": "Backend",
+    "title": "Backend & API Development",
+    "description": "Scalable backend systems, REST APIs, authentication, database architecture, and third-party integrations built to support growing businesses."
+  },
+  {
+    "icon": "🚀",
+    "tag": "SEO",
+    "title": "SEO & Performance Optimization",
+    "description": "Improve search visibility, website speed, Core Web Vitals, and overall user experience to increase traffic, engagement, and conversions."
+  }
+]

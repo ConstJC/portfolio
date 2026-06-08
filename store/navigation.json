@@ -1,0 +1,35 @@
+{
+  "links": [
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Services", "href": "#services" },
+    {
+      "label": "About",
+      "dropdown": [
+        { "label": "Work Experience", "description": "Career history", "href": "#experience" },
+        { "label": "Education", "description": "Education background", "href": "#education" },
+        { "label": "Testimonials", "description": "What clients say", "href": "#testimonials" }
+      ]
+    },
+    { "label": "FAQ's", "href": "#faq" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "footerColumns": [
+    {
+      "heading": "Work",
+      "links": [
+        { "label": "Projects",   "href": "#projects" },
+        { "label": "Services",   "href": "#services" },
+        { "label": "Work Experience", "href": "#experience" }
+      ]
+    },
+    {
+      "heading": "Me",
+      "links": [
+        { "label": "About",        "href": "#services" },
+        { "label": "Education",        "href": "#education" },
+        { "label": "Testimonials", "href": "#testimonials" },
+        { "label": "FAQ's",          "href": "#faq" }
+      ]
+    }
+  ]
+}
