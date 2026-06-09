@@ -33,7 +33,7 @@ export default function Ways() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={VP}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-card border border-border rounded-2xl py-7 px-[22px] shadow-[var(--shadow-sm)] transition-[border-color,transform,box-shadow] duration-[220ms]"
+              className="flex flex-col items-center bg-card border border-border rounded-2xl py-7 px-[22px] shadow-[var(--shadow-sm)] transition-[border-color,transform,box-shadow] duration-[220ms]"
               whileHover={{ y: -3 }}
             >
               <div className="text-[1.8rem] mb-3.5 w-13 h-13 rounded-xl bg-primary-light border border-primary-border flex items-center justify-center">
@@ -48,7 +48,7 @@ export default function Ways() {
                 {card.title}
               </div>
 
-              <div className="text-[0.82rem] text-text2 leading-[1.65]">
+              <div className="text-[0.82rem] text-text2 leading-[1.65] text-center">
                 {card.description}
               </div>
             </motion.div>

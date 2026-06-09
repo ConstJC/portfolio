@@ -35,14 +35,14 @@ export default function Education() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
               className={[
-                "flex items-center gap-5 py-7",
+                "flex items-start gap-5 py-7",
                 i < educationData.length - 1 ? "border-b border-divider" : "",
               ].join(" ")}
             >
               {/* Logo */}
               <div className="shrink-0 w-12 h-12 rounded-full bg-card border border-border2 flex items-center justify-center overflow-hidden">
                 {edu.logoUrl ? (
-                  <Image src={edu.logoUrl} alt={edu.institution} width={48} height={48} className="object-cover" />
+                  <Image src={edu.logoUrl} alt={edu.org} width={48} height={48} className="object-cover" />
                 ) : (
                   <span className="text-[0.6rem] font-extrabold text-text2 tracking-tight text-center leading-tight px-1">
                     {edu.initials}
@@ -50,17 +50,22 @@ export default function Education() {
                 )}
               </div>
 
-              {/* Name + degree + period */}
-              <div className="block sm:flex min-w-0 justify-between w-full items-center">
+              {/* Name + role + period */}
+              <div className="block sm:flex min-w-0 justify-between w-full items-start">
                 <div className="flex flex-col">
                   <div className="font-bold text-[1rem] text-text leading-[1.3]">
-                    {edu.institution}
+                    {edu.org}
                   </div>
                   <div className="text-[0.83rem] text-text2 mt-[3px]">
-                    {edu.degree}
+                    {edu.role}
                   </div>
+                  {edu.description && (
+                    <div className="text-[0.78rem] text-text3 mt-[6px] max-w-xl leading-[1.6]">
+                      {edu.description}
+                    </div>
+                  )}
                 </div>
-                <div className="text-[0.75rem] text-text3 mt-[6px]">
+                <div className="text-[0.75rem] text-text3 mt-[6px] sm:ml-6 shrink-0">
                   {edu.period}
                 </div>
               </div>

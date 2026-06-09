@@ -24,18 +24,5 @@
     "logoUrl": "/images/prince-retail-logo.png",
     "description": "10-month internship designing and developing internal systems including a Queuing System and Asset Management platform. Worked with C#, .NET Core, SQL Server, jQuery, SignalR for real-time updates, and Figma for UI design. Applied scalable DB architecture principles.",
     "techs": ["C# .NET", "SQL Server", "SignalR", "jQuery", "Figma"]
-  },
-  {
-    "id": "usc",
-    "role": "Certificate of Computer Technology",
-    "org": "University of San Carlos - Talamban Campus",
-    "location": "Talamban Campus, Cebu",
-    "period": "Aug 2022 — Feb 2025",
-    "type": "On-site",
-    "employment": "Student",
-    "status": "earlier",
-    "logoUrl": "/images/usc-logo.png",
-    "description": "Major in Software Development. Capstone project: Paanakan sa Mandaue — a Clinic Management System covering admission, outpatient, billing, and patient records. Served as Team Lead and Full Stack Developer throughout the project lifecycle.",
-    "techs": ["PHP Native", "MySQL", "JavaScript", "Figma", "NOSQL", "HTML/CSS", "Java"]
   }
 ]

@@ -33,7 +33,7 @@ export default function Steps() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={VP}
               transition={{ duration: 0.5, delay: i * 0.12, ease: "easeOut" }}
-              className="bg-card border border-border rounded-2xl py-6 px-5 sm:py-8 sm:px-7 relative shadow-[var(--shadow-sm)]"
+              className="flex flex-col items-center bg-card border border-border rounded-2xl py-6 px-5 sm:py-8 sm:px-7 relative shadow-[var(--shadow-sm)]"
             >
               {/* Connector line */}
               {i < stepsData.length - 1 && (
@@ -53,7 +53,7 @@ export default function Steps() {
                 {step.title}
               </h3>
 
-              <p className="text-[0.82rem] text-text2 leading-[1.68]">
+              <p className="text-[0.82rem] text-text2 leading-[1.68] text-center">
                 {step.description}
               </p>
             </motion.div>

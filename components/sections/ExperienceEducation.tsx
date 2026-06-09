@@ -101,24 +101,8 @@ function ExpCard({ item, isStudent = false }: { item: CardItem; isStudent?: bool
   )
 }
 
-// Work experience = non-student entries from experience.json
-const workEntries: CardItem[] = experienceData.filter(
-  (e) => e.employment !== "Student"
-)
-
-// Education = all entries from education.json, enriched with experience.json data where available
-const expEduById = Object.fromEntries(
-  experienceData
-    .filter((e) => e.employment === "Student")
-    .map((e) => [e.id, e])
-)
-
-const eduEntries: CardItem[] = educationData.map((edu) => {
-  const rich = expEduById[edu.id]
-  return rich
-    ? { ...edu, role: rich.role, org: rich.org, location: rich.location, employment: rich.employment, status: rich.status, description: rich.description, techs: rich.techs }
-    : { id: edu.id, role: edu.degree, org: edu.institution, logoUrl: edu.logoUrl, initials: edu.initials, period: edu.period, employment: "Student" }
-})
+const workEntries: CardItem[] = experienceData as CardItem[]
+const eduEntries: CardItem[] = educationData as CardItem[]
 
 const VP = { once: true, margin: "-80px" }
 

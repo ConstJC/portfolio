@@ -1,26 +1,24 @@
 [
   {
     "id": "usc",
-    "institution": "University Of San Carlos",
-    "degree": "Certificate Of Computer Technology",
-    "period": "August 2022 – February 2025",
-    "initials": "USC",
-    "logoUrl": "/images/usc-logo.png"
+    "role": "Certificate of Computer Technology",
+    "org": "University of San Carlos - Talamban Campus",
+    "location": "Talamban Campus, Cebu",
+    "period": "Aug 2022 — Feb 2025",
+    "employment": "Student",
+    "status": "earlier",
+    "logoUrl": "/images/usc-logo.png",
+    "description": "Major in Software Development. Capstone project: Paanakan sa Mandaue — a Clinic Management System covering admission, outpatient, billing, and patient records. Served as Team Lead and Full Stack Developer throughout the project lifecycle.",
+    "techs": ["PHP Native", "MySQL", "JavaScript", "Figma", "NOSQL", "HTML/CSS", "Java"]
   },
   {
     "id": "pnp",
-    "institution": "Passarelles Numériques Philippines",
-    "degree": "Scholarship Program – IT Track",
+    "role": "Scholarship Program – IT Track",
+    "org": "Passarelles Numériques Philippines",
     "period": "August 2022 – February 2025",
+    "employment": "Student",
     "initials": "PN",
-    "logoUrl": "/images/pn-logo.png"
-  },
-  {
-    "id": "pnhs",
-    "institution": "Babag National High School",
-    "degree": "Junior To Senior High School",
-    "period": "June 2015 – March 2022",
-    "initials": "BNHS",
-    "logoUrl": "/images/bbnhs-logo.jpeg"
+    "logoUrl": "/images/pn-logo.png",
+    "description": "A holistic scholarship program designed to be practical and hands-on, nurturing creativity alongside professional and technical skills. The program also emphasizes personal development and wellbeing, and provides dedicated professional integration support to help graduates successfully enter the workforce."
   }
 ]
