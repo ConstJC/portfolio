@@ -7,6 +7,7 @@ import { Mail, MapPin, Clock } from "lucide-react"
 import emailjs from "@emailjs/browser"
 import siteData from "@/store/site.json"
 
+const EMAILJS_ENABLED = process.env.NEXT_PUBLIC_EMAILJS_ENABLED === "true"
 const SERVICE_ID  = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!
 const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!
 const PUBLIC_KEY  = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
@@ -53,6 +54,10 @@ export default function Cta() {
 
   const onSubmit = async (data: FormValues) => {
     setSendError(null)
+    if (!EMAILJS_ENABLED) {
+      setSendError("Contact form is currently disabled. Please email me directly.")
+      return
+    }
     try {
       await emailjs.send(
         SERVICE_ID,
