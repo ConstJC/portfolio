@@ -19,7 +19,12 @@
     "techs": ["Next.js", "NestJS", "Prisma", "TypeScript"],
     "liveUrl": "#",
     "sourceUrl": "#",
-    "thumbVariant": "pt-2"
+    "thumbVariant": "pt-2",
+    "images": [
+      "/images/eHealth-login.png",
+      "/images/eHealth-dashboard.png",
+      "/images/eHealth-patients.png"
+    ]
   },
   {
     "id": "renthub",
@@ -30,7 +35,12 @@
     "techs": ["Next.js", "React Native", "NestJS", "Prisma"],
     "liveUrl": "#",
     "sourceUrl": "#",
-    "thumbVariant": "pt-5"
+    "thumbVariant": "pt-5",
+    "images": [
+      "/images/renthub-login.png",
+      "/images/renthub-admin-dashboard.png",
+      "/images/renthub-landlord-dashboard.png"
+    ]
   },
   {
     "id": "paanakan",

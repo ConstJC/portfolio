@@ -1,7 +1,7 @@
 {
   "pill": {
     "icon": "🇵🇭",
-    "text": "Available for freelance · ",
+    "text": "Available Immediately · ",
     "highlight": "Cebu City, Philippines"
   },
   "role": "Software Engineer & Full Stack Developer & AI   Specialist",
@@ -16,7 +16,7 @@
   "floatingTags": [
     { "text": "Open to opportunities", "variant": "ft1" }
   ],
-  "badge": "Available for freelance",
+  "badge": "Available Immediately",
   "photo": "/images/pc.png",
   "techStack": ["Next.js", "NestJS", "React Native", "TypeScript", "C# .NET", "Tailwind CSS"],
   "quickStats": [

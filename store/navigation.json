@@ -6,7 +6,6 @@
       "label": "About",
       "dropdown": [
         { "label": "Work Experience", "description": "Career history", "href": "#experience" },
-        { "label": "Education", "description": "Education background", "href": "#education" },
         { "label": "Testimonials", "description": "What clients say", "href": "#testimonials" }
       ]
     },

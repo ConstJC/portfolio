@@ -85,11 +85,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        {/* <div className="border-t border-border py-5 flex justify-center items-center">
+        <div className="border-t border-border py-5 flex justify-center items-center">
           <p className="text-[0.77rem] text-text3">{siteData.copyright}</p>
-        </div> */}
+        </div>
         
-        <div className="border-t border-border py-5 flex items-center justify-between flex-wrap gap-3">
+        {/* <div className="border-t border-border py-5 flex items-center justify-between flex-wrap gap-3">
           <p className="text-[0.77rem] text-text3">{siteData.copyright}</p>
           <div className="flex gap-5">
             {["Privacy Policy"].map((label) => (
@@ -102,7 +102,7 @@ export default function Footer() {
               </a>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   )
