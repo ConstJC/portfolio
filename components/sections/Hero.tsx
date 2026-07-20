@@ -1,10 +1,25 @@
 "use client"
 
 import Image from "next/image"
-import { ArrowRight, ExternalLink } from "lucide-react"
+import type { ComponentType } from "react"
+import { ArrowRight, ExternalLink, LayoutTemplate, ServerCog, Smartphone } from "lucide-react"
 import { motion } from "framer-motion"
 import heroData from "@/store/hero.json"
 import siteData from "@/store/site.json"
+
+const skillBadgeIcons: Record<string, ComponentType<{ size?: number }>> = {
+  LayoutTemplate,
+  ServerCog,
+  Smartphone,
+}
+
+const skillBadgePositions = [
+  "-top-3 -right-5",
+  "top-[42%] -left-9 -translate-y-1/2",
+  "bottom-6 -right-9",
+]
+
+const skillBadgeDelays = [0, 0.5, 1]
 
 const GithubIcon = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
@@ -147,16 +162,25 @@ export default function Hero() {
           transition={{ duration: 0.75, delay: 0.18, ease: "easeOut" }}
           className="flex justify-end relative max-lg:hidden"
         >
-          <div className="relative w-[360px] h-[440px]">
+          <div className="relative w-[400px] h-[400px]">
 
             {/* Glow blob behind photo */}
             <div className="absolute -inset-8 bg-[radial-gradient(ellipse,var(--primary-light)_0%,transparent_68%)] blur-[28px] z-0 rounded-full" />
 
-            {/* Decorative ring */}
-            <div className="absolute -inset-3 rounded-[32px] border border-primary-border z-0 opacity-50" />
+            {/* Decorative broken arc ring */}
+            <div
+              className="absolute -inset-4 rounded-full z-0"
+              style={{
+                background:
+                  "conic-gradient(from -90deg, var(--primary) 0deg, var(--primary) 55deg, transparent 75deg, transparent 150deg, var(--primary-hover) 150deg, var(--primary-hover) 245deg, transparent 265deg, transparent 360deg)",
+                WebkitMask:
+                  "radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px))",
+                mask: "radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px))",
+              }}
+            />
 
             {/* Photo */}
-            <div className="relative z-[1] w-full h-full rounded-[24px] overflow-hidden bg-card border border-border2 shadow-[var(--shadow-xl)]">
+            <div className="relative z-[1] w-full h-full rounded-full overflow-hidden bg-[var(--primary-light)] border border-border2 shadow-[var(--shadow-xl)]">
               <Image
                 src={heroData.photo}
                 alt="Jay Clark Anore"
@@ -164,19 +188,28 @@ export default function Hero() {
                 className="object-cover"
                 priority
               />
-              {/* Gradient footer overlay */}
-              <div className="absolute bottom-0 left-0 right-0 h-[100px] bg-[linear-gradient(to_top,rgba(14,22,42,0.7)_0%,transparent_100%)] z-[2]" />
             </div>
 
-            {/* Float tag — top left */}
-            <motion.div
-              animate={{ y: [0, -7, 0] }}
-              transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-4 -left-7 z-[3] bg-card border border-border2 rounded-[10px] py-2 px-[14px] text-[0.75rem] font-semibold text-text shadow-[var(--shadow-sm)] flex items-center gap-[7px] whitespace-nowrap"
-            >
-              <span className="w-[7px] h-[7px] rounded-full shrink-0" style={{ background: "var(--success)" }} />
-              {heroData.floatingTags[0].text}
-            </motion.div>
+            {/* Floating skill badges */}
+            {heroData.skillBadges.map((badge, i) => {
+              const Icon = skillBadgeIcons[badge.icon]
+              return (
+                <motion.div
+                  key={badge.label}
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{
+                    duration: 3.2 + i * 0.3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: skillBadgeDelays[i],
+                  }}
+                  title={badge.label}
+                  className={`absolute ${skillBadgePositions[i]} z-[3] w-14 h-14 rounded-full bg-card border border-border2 shadow-[var(--shadow-md)] flex items-center justify-center text-primary`}
+                >
+                  {Icon && <Icon size={22} />}
+                </motion.div>
+              )
+            })}
 
             {/* Available badge — bottom center */}
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 z-[3]">

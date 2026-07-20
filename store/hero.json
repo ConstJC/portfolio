@@ -4,24 +4,26 @@
     "text": "Available Immediately · ",
     "highlight": "Cebu City, Philippines"
   },
-  "role": "Software Engineer & Full Stack Developer & AI   Specialist",
-  "headline": "Turn Your Vision",
-  "headlineAccent": "Into Reality",
-  "description": "Full Stack Developer crafting <strong>scalable web & mobile apps</strong> — from pixel-perfect frontends to robust APIs and real-time systems. Based in Cebu, PH.",
+  "role": "Software Engineer | Full Stack Developer | AI-Powered Systems Builder",
+  "headline": "Let's Build",
+  "headlineAccent": "Something Great",
+  "description": "I build <strong>secure, scalable web and mobile applications </strong> with modern technologies, cloud infrastructure, and robust backend systems that with scale with your business.",
   "cta": {
     "primary": { "label": "View My Work", "href": "#projects" },
     "secondary": { "label": "Get in Touch", "href": "#contact" }
   },
   "footnote": "Accepts GCash, Maya, bank transfer & PayPal · Remote-friendly",
-  "floatingTags": [
-    { "text": "Open to opportunities", "variant": "ft1" }
-  ],
   "badge": "Available Immediately",
-  "photo": "/images/pc.png",
+  "photo": "/images/pf.png",
+  "skillBadges": [
+    { "icon": "LayoutTemplate", "label": "Frontend" },
+    { "icon": "ServerCog", "label": "Backend" },
+    { "icon": "Smartphone", "label": "Mobile" }
+  ],
   "techStack": ["Next.js", "NestJS", "React Native", "TypeScript", "C# .NET", "Tailwind CSS"],
   "quickStats": [
-    { "value": "4+", "label": "Projects" },
-    { "value": "1yr+", "label": "Experience" },
-    { "value": "10+", "label": "Technologies" }
+    { "value": "5+", "label": "Projects" },
+    { "value": "2yrs+", "label": "Experience" },
+    { "value": "12+", "label": "Technologies" }
   ]
 }
