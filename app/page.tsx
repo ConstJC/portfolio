@@ -4,6 +4,7 @@ import FloatingActions from "@/components/layout/FloatingActions"
 import Hero from "@/components/sections/Hero"
 import Ways from "@/components/sections/Ways"
 import Steps from "@/components/sections/Steps"
+import Skills from "@/components/sections/Skills"
 import Projects from "@/components/sections/Projects"
 import ExperienceEducation from "@/components/sections/ExperienceEducation"
 import Services from "@/components/sections/Services"
@@ -23,6 +24,8 @@ export default function Home() {
         {/* <Stats />
         <div className="sep" /> */}
         <Steps />
+        <div className="sep" />
+        <Skills />
         <div className="sep" />
         <Projects />
         <div className="sep" />

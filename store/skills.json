@@ -1,0 +1,50 @@
+[
+  {
+    "category": "Frontend",
+    "icon": "LayoutTemplate",
+    "summary": "Accessible, responsive interfaces with polished motion and maintainable component systems.",
+    "tools": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"]
+  },
+  {
+    "category": "Backend",
+    "icon": "ServerCog",
+    "summary": "Reliable APIs, authentication flows, business logic, and production-ready server architecture.",
+    "tools": ["NestJS", "Node.js", "C# .NET", "REST APIs", "SignalR"]
+  },
+  {
+    "category": "Databases",
+    "icon": "Database",
+    "summary": "Structured data models, efficient queries, migrations, and practical persistence design.",
+    "tools": ["Prisma", "SQL Server", "PostgreSQL", "MySQL", "MongoDB", "Supabase", "Firebase", "Redis", "Database Design", "Entity Framework"]
+  },
+  {
+    "category": "Mobile",
+    "icon": "Smartphone",
+    "summary": "Cross-platform app experiences for operational tools and customer-facing products.",
+    "tools": ["React Native", "Flutter", "Expo", "Mobile UI", "App Integrations"]
+  },
+  {
+    "category": "Product & UI",
+    "icon": "Code2",
+    "summary": "Clean product flows from requirements to reusable screens that users can move through quickly.",
+    "tools": ["UI Design", "UX Flows", "Prototyping", "Design Systems", "Forms"]
+  },
+  {
+    "category": "Delivery",
+    "icon": "Workflow",
+    "summary": "Practical development workflow with testing, deployment, documentation, and iteration loops.",
+    "tools": ["Git", "Vercel", "CI/CD", "Agile", "Technical Docs"]
+  },
+  {
+    "category": "Cloud & DevOps",
+    "icon": "Cloud",
+    "summary": "Deploying, scaling, and automating infrastructure across major cloud providers and container platforms.",
+    "tools": ["AWS", "Google Cloud", "Azure", "Docker", "Kubernetes", "GitHub Actions", "Nginx"]
+  },
+  {
+    "category": "CMS & Legacy",
+    "icon": "Wrench",
+    "summary": "Hands-on experience across CMS platforms, legacy stacks, and hosting environments from years of shipping real projects.",
+    "tools": ["Shopify", "WordPress", "ASP Classic", "VBScript", "VB.NET", "PHP", "IIS", "Cpanel", "Themes & Plugins"]
+  }
+]

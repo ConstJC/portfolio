@@ -141,7 +141,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             <button
               type="button"
               onClick={() => setIsPreviewOpen(true)}
-              className="absolute left-2 top-2 grid size-8 place-items-center rounded-full bg-black/45 text-white border border-white/15 backdrop-blur transition-colors hover:bg-black/65 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="absolute right-2 bottom-2 grid size-8 place-items-center rounded-full bg-black/45 text-white border border-white/15 backdrop-blur transition-colors hover:bg-black/65 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               aria-label={`Open ${project.title} full preview`}
             >
               <Maximize2 size={15} aria-hidden="true" />

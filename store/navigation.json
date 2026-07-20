@@ -1,5 +1,6 @@
 {
   "links": [
+    { "label": "Skills", "href": "#skills" },
     { "label": "Projects", "href": "#projects" },
     { "label": "Services", "href": "#services" },
     {
@@ -17,6 +18,7 @@
       "heading": "Work",
       "links": [
         { "label": "Projects",   "href": "#projects" },
+        { "label": "Skills",   "href": "#skills" },
         { "label": "Services",   "href": "#services" },
         { "label": "Work Experience", "href": "#experience" }
       ]

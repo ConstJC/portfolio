@@ -226,21 +226,10 @@ export default function Testimonials() {
             viewport={VP}
             transition={{ duration: 0.5 }}
             suppressHydrationWarning
-            className="flex justify-between items-end mb-12 flex-wrap gap-4"
+            className="mb-12"
           >
-            <div>
-              <div className="section-eyebrow">Social Proof</div>
-              <h2 className="section-title">What Clients Say</h2>
-            </div>
-            <button
-              onClick={() => setModalOpen(true)}
-              className="btn-ghost-sm inline-flex items-center gap-1.5"
-            >
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-                <path d="M12 5v14M5 12h14" />
-              </svg>
-              Share Your Experience
-            </button>
+            <div className="section-eyebrow">Social Proof</div>
+            <h2 className="section-title">What Clients Say</h2>
           </motion.div>
 
           {/* Carousel */}
