@@ -180,6 +180,11 @@ body {
   50%       { opacity: 0.45; transform: scale(0.75); }
 }
 
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
 .info-link:hover { text-decoration: underline !important; }
 .c-input::placeholder { color: var(--text3); }
 .c-input:focus { outline: none !important; border-color: var(--primary) !important; box-shadow: 0 0 0 3px var(--primary-light) !important; }

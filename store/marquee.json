@@ -1,0 +1,17 @@
+[
+  { "name": "Next.js", "icon": "SiNextdotjs" },
+  { "name": "NestJS", "icon": "SiNestjs" },
+  { "name": "React", "icon": "SiReact" },
+  { "name": "TypeScript", "icon": "SiTypescript" },
+  { "name": "C# / .NET", "icon": "SiDotnet" },
+  { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
+  { "name": "Node.js", "icon": "SiNodedotjs" },
+  { "name": "PostgreSQL", "icon": "SiPostgresql" },
+  { "name": "MongoDB", "icon": "SiMongodb" },
+  { "name": "Docker", "icon": "SiDocker" },
+  { "name": "Prisma", "icon": "SiPrisma" },
+  { "name": "Redis", "icon": "SiRedis" },
+  { "name": "Flutter", "icon": "SiFlutter" },
+  { "name": "Firebase", "icon": "SiFirebase" },
+  { "name": "Git", "icon": "SiGit" }
+]

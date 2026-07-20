@@ -6,6 +6,7 @@ import { ArrowRight, ExternalLink, LayoutTemplate, ServerCog, Smartphone } from 
 import { motion } from "framer-motion"
 import heroData from "@/store/hero.json"
 import siteData from "@/store/site.json"
+import TechMarquee from "@/components/sections/TechMarquee"
 
 const skillBadgeIcons: Record<string, ComponentType<{ size?: number }>> = {
   LayoutTemplate,
@@ -52,7 +53,7 @@ export default function Hero() {
       <div className="absolute top-[5%] left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-[radial-gradient(ellipse,var(--glow)_0%,transparent_65%)] pointer-events-none z-0" />
 
       {/* Hero grid */}
-      <div className="grid grid-cols-2 gap-10 lg:gap-16 min-h-svh max-w-[1160px] mx-auto pt-[calc(60px+60px)] px-4 sm:px-6 pb-[72px] items-center relative z-[1] max-lg:grid-cols-1 max-lg:min-h-0 max-sm:pt-[68] max-sm:pb-12">
+      <div className="grid grid-cols-2 gap-10 lg:gap-16 min-h-svh max-w-[1160px] mx-auto pt-[calc(60px+60px)] px-4 sm:px-6 pb-[130px] items-center relative z-[1] max-lg:grid-cols-1 max-lg:min-h-0 max-sm:pt-[68] max-sm:pb-12">
 
         {/* ── LEFT ── */}
         <motion.div
@@ -228,6 +229,11 @@ export default function Hero() {
             </div>
           </div>
         </motion.div>
+      </div>
+
+      {/* Tech marquee — pinned to bottom of hero viewport */}
+      <div className="absolute bottom-0 left-0 right-0 z-[2] max-sm:hidden">
+        <TechMarquee />
       </div>
     </div>
   )
