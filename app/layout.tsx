@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Plus_Jakarta_Sans } from "next/font/google"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css"
 import BFCacheGuard from "@/components/layout/BFCacheGuard"
 
@@ -43,6 +44,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=performance.navigation&&performance.navigation.type;if(t===2){window.location.reload();return;}var e=performance.getEntriesByType&&performance.getEntriesByType('navigation');if(e&&e.length&&e[0].type==='back_forward'){window.location.reload();}}catch(ex){}})();` }} />
         <BFCacheGuard />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   )
