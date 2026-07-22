@@ -79,6 +79,11 @@ export default function Hero() {
             {heroData.pill.highlight}
           </motion.div>
 
+          {/* Name intro (visible, for SEO on-page name weight) */}
+          <div className="text-[0.95rem] font-semibold text-text2 mb-2">
+            Hi, I&apos;m {siteData.name}
+          </div>
+
           {/* Role tag */}
           <div className="text-[0.75rem] font-bold tracking-[0.08em] uppercase text-primary mb-3.5">
             {heroData.role}

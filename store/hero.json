@@ -22,7 +22,7 @@
   ],
   "techStack": ["Next.js", "NestJS", "React Native", "TypeScript", "C# .NET", "Tailwind CSS"],
   "quickStats": [
-    { "value": "5+", "label": "Projects" },
+    { "value": "4+", "label": "Projects" },
     { "value": "2yrs+", "label": "Experience" },
     { "value": "12+", "label": "Technologies" }
   ]
