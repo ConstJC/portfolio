@@ -5,10 +5,9 @@
     "org": "CODY Web Development Inc.",
     "location": "Cebu, PH",
     "period": "March 2025 — Present",
-    "type": "On-site",
-    "employment": "Full-time",
+    "type": "Hybrid",
     "status": "current",
-    "logoUrl": "/images/pc.png",
+    "logoUrl": "/images/cody-logo.png",
     "description": "Building full-stack web and mobile applications using Next.js, NestJS, Flutter, and C#. Working with AI coding tools (Claude Code, Cursor, Codex) for accelerated development with proper planning, Prisma for DB management, and WebSockets for real-time features.",
     "techs": ["Next.js", "NestJS", "Flutter", "C#", "Prisma", "WebSockets", "FCM"]
   },
