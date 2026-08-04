@@ -1,10 +1,11 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { useEffect, useMemo, useState } from "react"
 import { createPortal } from "react-dom"
 import { motion } from "framer-motion"
-import { ChevronLeft, ChevronRight, Code2, ExternalLink, Maximize2, X } from "lucide-react"
+import { ArrowRight, ChevronLeft, ChevronRight, Code2, ExternalLink, Maximize2, X } from "lucide-react"
 import projectsData from "@/store/projects.json"
 
 const thumbGradients: Record<string, string> = {
@@ -20,34 +21,65 @@ type Project = (typeof projectsData)[number] & {
   images?: string[]
 }
 
-export default function Projects() {
-  const orderedProjects = useMemo(
-    () =>
-      [...(projectsData as Project[])].sort((a, b) => {
-        const aHasImages = Number(Boolean(a.images?.length))
-        const bHasImages = Number(Boolean(b.images?.length))
+interface ProjectsProps {
+  /** Cap the number of cards rendered — omit to show every project. */
+  limit?: number
+  eyebrow?: string
+  title?: string
+  description?: string
+  /** Renders a "View all work" link through to /portfolio. */
+  showViewAll?: boolean
+  /** Off when the page already supplies its own heading via PageHeader. */
+  showHeader?: boolean
+}
 
-        return bHasImages - aHasImages
-      }),
-    []
-  )
+export default function Projects({
+  limit,
+  eyebrow = "Selected Work",
+  title = "Recent Projects",
+  description,
+  showViewAll = false,
+  showHeader = true,
+}: ProjectsProps = {}) {
+  const orderedProjects = useMemo(() => {
+    const sorted = [...(projectsData as Project[])].sort((a, b) => {
+      const aHasImages = Number(Boolean(a.images?.length))
+      const bHasImages = Number(Boolean(b.images?.length))
+
+      return bHasImages - aHasImages
+    })
+
+    return limit ? sorted.slice(0, limit) : sorted
+  }, [limit])
 
   return (
     <section className="py-14 sm:py-24 relative z-[1]" id="projects">
       <div className="wrap">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={VP}
-          transition={{ duration: 0.5 }}
-          className="flex justify-between items-end mb-12 flex-wrap gap-4"
-        >
-          <div>
-            <div className="section-eyebrow">Selected Work</div>
-            <h2 className="section-title">Recent Projects</h2>
-          </div>
-        </motion.div>
+        {showHeader && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VP}
+            transition={{ duration: 0.5 }}
+            className="flex justify-between items-end mb-12 flex-wrap gap-4"
+          >
+            <div>
+              <div className="section-eyebrow">{eyebrow}</div>
+              <h2 className="section-title">{title}</h2>
+              {description && <p className="section-desc">{description}</p>}
+            </div>
+
+            {showViewAll && (
+              <Link
+                href="/portfolio"
+                className="inline-flex items-center gap-1.5 text-[0.85rem] font-bold text-text2 no-underline transition-colors duration-[180ms] hover:text-primary"
+              >
+                View all work <ArrowRight size={15} />
+              </Link>
+            )}
+          </motion.div>
+        )}
 
         {/* Project cards */}
         <div className="grid grid-cols-3 gap-3.5 max-lg:grid-cols-2 max-sm:grid-cols-1">

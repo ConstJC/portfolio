@@ -1,6 +1,8 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { useTheme } from "@/hooks/useTheme"
 import navData from "@/store/navigation.json"
@@ -8,9 +10,9 @@ import siteData from "@/store/site.json"
 
 export default function Navbar() {
   const { theme, syncTheme } = useTheme()
+  const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const [aboutOpen, setAboutOpen] = useState(false)
 
   useEffect(() => {
     syncTheme()
@@ -32,7 +34,13 @@ export default function Navbar() {
     return () => { document.body.style.overflow = "" }
   }, [menuOpen])
 
-  const closeMenu = () => { setMenuOpen(false); setAboutOpen(false) }
+  const closeMenu = () => setMenuOpen(false)
+
+  // Section links (anything with a hash) never take the active pill — only routes do.
+  const isActive = (href: string) => {
+    if (href.includes("#")) return false
+    return href === "/" ? pathname === "/" : pathname.startsWith(href)
+  }
 
   return (
     <>
@@ -44,42 +52,28 @@ export default function Navbar() {
         ].join(" ")}
       >
         {/* Logo */}
-        <a href="#" className="inline-flex items-center gap-2.5 font-extrabold text-[1.3rem] text-text no-underline">
+        <Link href="/" className="inline-flex items-center gap-2.5 font-extrabold text-[1.3rem] text-text no-underline">
           <span className="w-[30px] h-[30px] rounded-lg bg-primary text-white flex items-center justify-center text-[0.75rem] font-extrabold">
             {siteData.initials}
           </span>
           {siteData.handle}
-        </a>
+        </Link>
 
         {/* Desktop nav links */}
         <ul className="flex items-center gap-0.5 list-none max-md:hidden">
           {navData.links.map((link) => (
-            <li key={link.label} className="relative group">
-              <a
+            <li key={link.label}>
+              <Link
                 href={link.href}
-                className="inline-flex items-center gap-1 py-[6px] px-3 text-[0.85rem] font-semibold text-text2 no-underline rounded-lg transition-[color,background] duration-[180ms] hover:text-text hover:bg-card2 cursor-pointer"
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={[
+                  "inline-flex items-center gap-1 py-[6px] px-3 text-[0.85rem] font-semibold no-underline rounded-lg",
+                  "transition-[color,background] duration-[180ms] hover:text-text hover:bg-card2 cursor-pointer",
+                  isActive(link.href) ? "text-text bg-card2" : "text-text2",
+                ].join(" ")}
               >
                 {link.label}
-                {link.dropdown && (
-                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.2">
-                    <path d="M4 6l4 4 4-4" />
-                  </svg>
-                )}
-              </a>
-              {link.dropdown && (
-                <div className="absolute top-[calc(100%+1px)] left-1/2 -translate-x-1/2 bg-card border border-border2 rounded-xl p-2 min-w-[220px] shadow-[var(--shadow-md)] opacity-0 pointer-events-none transition-opacity duration-[150ms] z-[200] group-hover:opacity-100 group-hover:pointer-events-auto">
-                  {link.dropdown.map((item) => (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      className="block py-[10px] px-[14px] rounded-lg no-underline transition-[background] duration-[150ms] hover:bg-card2"
-                    >
-                      <div className="font-bold text-[0.83rem] text-text mb-0.5">{item.label}</div>
-                      <div className="text-[0.75rem] text-text3">{item.description}</div>
-                    </a>
-                  ))}
-                </div>
-              )}
+              </Link>
             </li>
           ))}
         </ul>
@@ -87,12 +81,13 @@ export default function Navbar() {
         {/* Right side */}
         <div className="flex items-center gap-2">
           <a href={siteData.resumeUrl} className="btn-ghost-sm max-md:!hidden">My Resume</a>
-          <a href="#contact" className="btn-primary-sm max-md:!hidden">Hire Me ↗</a>
+          <Link href="/#contact" className="btn-primary-sm max-md:!hidden">Hire Me ↗</Link>
 
           {/* Hamburger — mobile only */}
           <button
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Toggle menu"
+            aria-expanded={menuOpen}
             className="md:hidden relative w-9 h-9 flex flex-col items-center justify-center gap-[5px] rounded-lg hover:bg-card2 transition-colors duration-150"
           >
             <motion.span
@@ -140,12 +135,12 @@ export default function Navbar() {
             >
               {/* Drawer header */}
               <div className="flex items-center justify-between px-6 h-16 border-b border-divider shrink-0">
-                <a href="#" onClick={closeMenu} className="inline-flex items-center gap-2.5 font-extrabold text-[1.3rem] text-text no-underline">
+                <Link href="/" onClick={closeMenu} className="inline-flex items-center gap-2.5 font-extrabold text-[1.3rem] text-text no-underline">
                   <span className="w-[30px] h-[30px] rounded-lg bg-primary text-white flex items-center justify-center text-[0.75rem] font-extrabold">
                     {siteData.initials}
                   </span>
                   {siteData.handle}
-                </a>
+                </Link>
                 <button
                   onClick={closeMenu}
                   aria-label="Close menu"
@@ -166,56 +161,18 @@ export default function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.06 + 0.1, duration: 0.25 }}
                   >
-                    {link.dropdown ? (
-                      <>
-                        <button
-                          onClick={() => setAboutOpen((v) => !v)}
-                          className="w-full flex items-center justify-between px-3 py-3 rounded-xl text-[0.93rem] font-semibold text-text2 hover:text-text hover:bg-card2 transition-[color,background] duration-150"
-                        >
-                          {link.label}
-                          <motion.svg
-                            animate={{ rotate: aboutOpen ? 180 : 0 }}
-                            transition={{ duration: 0.2 }}
-                            width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.2"
-                          >
-                            <path d="M4 6l4 4 4-4" />
-                          </motion.svg>
-                        </button>
-                        <AnimatePresence initial={false}>
-                          {aboutOpen && (
-                            <motion.div
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: "auto", opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.22 }}
-                              className="overflow-hidden"
-                            >
-                              <div className="ml-3 pl-3 border-l border-divider py-1 mb-1">
-                                {link.dropdown.map((item) => (
-                                  <a
-                                    key={item.label}
-                                    href={item.href}
-                                    onClick={closeMenu}
-                                    className="block px-3 py-2.5 rounded-lg no-underline hover:bg-card2 transition-colors duration-150"
-                                  >
-                                    <div className="text-[0.85rem] font-bold text-text">{item.label}</div>
-                                    <div className="text-[0.74rem] text-text3 mt-[2px]">{item.description}</div>
-                                  </a>
-                                ))}
-                              </div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </>
-                    ) : (
-                      <a
-                        href={link.href}
-                        onClick={closeMenu}
-                        className="flex items-center px-3 py-3 rounded-xl text-[0.93rem] font-semibold text-text2 no-underline hover:text-text hover:bg-card2 transition-[color,background] duration-150"
-                      >
-                        {link.label}
-                      </a>
-                    )}
+                    <Link
+                      href={link.href}
+                      onClick={closeMenu}
+                      aria-current={isActive(link.href) ? "page" : undefined}
+                      className={[
+                        "flex items-center px-3 py-3 rounded-xl text-[0.93rem] font-semibold no-underline",
+                        "hover:text-text hover:bg-card2 transition-[color,background] duration-150",
+                        isActive(link.href) ? "text-text bg-card2" : "text-text2",
+                      ].join(" ")}
+                    >
+                      {link.label}
+                    </Link>
                   </motion.div>
                 ))}
               </div>
@@ -227,13 +184,13 @@ export default function Navbar() {
                 transition={{ delay: 0.3, duration: 0.25 }}
                 className="px-4 pb-8 pt-4 border-t border-divider shrink-0 flex flex-col gap-2.5"
               >
-                <a
-                  href="#contact"
+                <Link
+                  href="/#contact"
                   onClick={closeMenu}
                   className="btn-primary-sm w-full text-center justify-center"
                 >
                   Hire Me ↗
-                </a>
+                </Link>
                 <a
                   href={siteData.resumeUrl}
                   onClick={closeMenu}

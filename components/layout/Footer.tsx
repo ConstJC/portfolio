@@ -1,3 +1,4 @@
+import Link from "next/link"
 import siteData from "@/store/site.json"
 import navData from "@/store/navigation.json"
 import { FaFacebook, FaInstagram, FaGithub, FaLinkedinIn } from "react-icons/fa"
@@ -21,15 +22,15 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <a
-              href="#"
+            <Link
+              href="/"
               className="inline-flex items-center gap-2.5 font-extrabold text-base text-text no-underline mb-3.5"
             >
               <span className="w-[30px] h-[30px] rounded-lg bg-primary text-white inline-flex items-center justify-center text-[0.75rem] font-extrabold">
                 {siteData.initials}
               </span>
               {siteData.handle}
-            </a>
+            </Link>
             <p className="text-[0.82rem] text-text2 leading-[1.7] max-w-[280px] mb-5 mt-1">
               {siteData.footerDescription}
             </p>
@@ -57,12 +58,12 @@ export default function Footer() {
               <ul className="list-none flex flex-col gap-[9px]">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    <a
+                    <Link
                       href={link.href}
                       className="text-[0.83rem] text-text2 no-underline transition-colors duration-[180ms] hover:text-primary"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

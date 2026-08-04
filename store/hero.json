@@ -9,12 +9,13 @@
   "headlineAccent": "Something Great",
   "description": "I build <strong>secure, scalable web and mobile applications </strong> with modern technologies, cloud infrastructure, and robust backend systems that with scale with your business.",
   "cta": {
-    "primary": { "label": "View My Work", "href": "#projects" },
+    "primary": { "label": "View My Work", "href": "/portfolio" },
     "secondary": { "label": "Get in Touch", "href": "#contact" }
   },
   "footnote": "Accepts GCash, Maya, bank transfer & PayPal · Remote-friendly",
   "badge": "Available Immediately",
-  "photo": "/images/pf.png",
+  "photo": "/images/software-hero.png",
+  "photoAlt": "Isometric illustration of software development — a laptop showing code alongside cloud storage, a CMS panel, security, and media modules",
   "skillBadges": [
     { "icon": "LayoutTemplate", "label": "Frontend" },
     { "icon": "ServerCog", "label": "Backend" },

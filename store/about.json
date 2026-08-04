@@ -1,0 +1,45 @@
+{
+  "hero": {
+    "photo": "/images/pf.png",
+    "role": "Full-Stack Developer | Mobile Engineer | Application Security Specialist | AI-Powered Systems Builder",
+    "intro": "I build secure, scalable web and mobile applications with modern technologies, cloud infrastructure, and security-first development practices.",
+    "pills": [
+      { "icon": "MapPin",    "label": "Philippines" },
+      { "icon": "Globe",     "label": "Remote Worldwide" },
+      { "icon": "Briefcase", "label": "Full-Time / Contract" },
+      { "icon": "Dot",       "label": "Available Immediately" }
+    ]
+  },
+  "summary": {
+    "eyebrow": "Professional Summary",
+    "title": "About Me",
+    "lede": "2+ years building production software across full-stack, mobile, security, and AI.",
+    "cards": [
+      {
+        "id": "full-stack",
+        "title": "Full-Stack Development",
+        "description": "End-to-end web applications with React, Next.js, Node.js, and PostgreSQL — from architecture to deployment."
+      },
+      {
+        "id": "mobile",
+        "title": "Mobile Development",
+        "description": "Cross-platform apps with React Native and Flutter, optimized for performance and native-like UX."
+      },
+      {
+        "id": "security",
+        "title": "Application Security",
+        "description": "Penetration testing, OWASP assessments, and secure SDLC integration from design through production."
+      },
+      {
+        "id": "cloud",
+        "title": "Cloud Technologies",
+        "description": "AWS, Vercel, Docker, and CI/CD pipelines for reliable, repeatable deployments at scale."
+      },
+      {
+        "id": "ai",
+        "title": "AI-Assisted Development",
+        "description": "OpenAI APIs, Claude, and AI workflow automation woven into real product and delivery pipelines."
+      }
+    ]
+  }
+}

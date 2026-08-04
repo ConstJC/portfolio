@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import { ChevronDown } from "lucide-react"
 import { AccordionItem } from "@/components/ui/accordion"
 import faqData from "@/store/faq.json"
@@ -9,10 +9,11 @@ import faqData from "@/store/faq.json"
 const INITIAL_COUNT = 5
 const VP = { once: true, margin: "-80px" }
 
+const alwaysVisible = faqData.slice(0, INITIAL_COUNT)
+const overflow = faqData.slice(INITIAL_COUNT)
+
 export default function Faq() {
   const [expanded, setExpanded] = useState(false)
-
-  const visible = expanded ? faqData : faqData.slice(0, INITIAL_COUNT)
 
   return (
     <section className="py-14 sm:py-24 relative z-[1]" id="faq">
@@ -46,41 +47,55 @@ export default function Faq() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="max-w-[760px] mx-auto border-t border-divider"
         >
-          <AnimatePresence initial={false}>
-            {visible.map((item, i) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.28, ease: "easeOut" }}
-                className="overflow-hidden"
-              >
+          {alwaysVisible.map((item, i) => (
+            <AccordionItem
+              key={item.id}
+              question={item.question}
+              answer={item.answer}
+              variant="flat"
+              isLast={!expanded && i === alwaysVisible.length - 1}
+            />
+          ))}
+
+          {/* Overflow Q&As stay mounted so crawlers index every answer — the
+              collapse is height-only, and `inert` keeps them out of the tab
+              order and a11y tree while hidden. */}
+          {overflow.length > 0 && (
+            <motion.div
+              animate={{ height: expanded ? "auto" : 0 }}
+              initial={false}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="overflow-hidden"
+              inert={!expanded}
+            >
+              {overflow.map((item, i) => (
                 <AccordionItem
+                  key={item.id}
                   question={item.question}
                   answer={item.answer}
                   variant="flat"
-                  isLast={i === visible.length - 1 && !expanded
-                    ? true
-                    : i === faqData.length - 1}
+                  isLast={i === overflow.length - 1}
                 />
-              </motion.div>
-            ))}
-          </AnimatePresence>
+              ))}
+            </motion.div>
+          )}
 
           {/* View More / Hide Less */}
-          <div className="flex justify-center pt-7">
-            <button
-              onClick={() => setExpanded((v) => !v)}
-              className="inline-flex items-center gap-[7px] py-[9px] px-[22px] bg-card border border-divider rounded-full text-[0.82rem] font-bold text-text2 cursor-pointer font-sans transition-[border-color,color,background] duration-[180ms] hover:border-primary-border hover:text-primary hover:bg-primary-light"
-            >
-              {expanded ? "Hide Less" : `View More (${faqData.length - INITIAL_COUNT} more)`}
-              <ChevronDown
-                size={14}
-                className={`transition-transform duration-[250ms] ${expanded ? "rotate-180" : "rotate-0"}`}
-              />
-            </button>
-          </div>
+          {overflow.length > 0 && (
+            <div className="flex justify-center pt-7">
+              <button
+                onClick={() => setExpanded((v) => !v)}
+                aria-expanded={expanded}
+                className="inline-flex items-center gap-[7px] py-[9px] px-[22px] bg-card border border-divider rounded-full text-[0.82rem] font-bold text-text2 cursor-pointer font-sans transition-[border-color,color,background] duration-[180ms] hover:border-primary-border hover:text-primary hover:bg-primary-light"
+              >
+                {expanded ? "Hide Less" : `View More (${overflow.length} more)`}
+                <ChevronDown
+                  size={14}
+                  className={`transition-transform duration-[250ms] ${expanded ? "rotate-180" : "rotate-0"}`}
+                />
+              </button>
+            </div>
+          )}
         </motion.div>
 
       </div>

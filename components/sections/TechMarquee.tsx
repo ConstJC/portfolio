@@ -42,7 +42,7 @@ export default function TechMarquee() {
   const items = [...marqueeData, ...marqueeData]
 
   return (
-    <div className="relative z-[1] py-4 border-t border-border2 bg-[linear-gradient(to_top,var(--bg)_60%,transparent_100%)] overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+    <div className="relative z-[1] py-2 border-t border-border2 bg-[linear-gradient(to_top,var(--bg)_60%,transparent_100%)] overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
       <div
         className="flex items-center gap-9 w-max"
         style={{ animation: "marquee-scroll 32s linear infinite" }}

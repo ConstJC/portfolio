@@ -1,0 +1,30 @@
+[
+  {
+    "id": "appsec",
+    "icon": "ShieldCheck",
+    "title": "Offensive Application Security",
+    "description": "Working through OWASP Top 10 labs and hands-on penetration testing to sharpen secure-SDLC review skills.",
+    "progress": "In progress"
+  },
+  {
+    "id": "ai-agents",
+    "icon": "Bot",
+    "title": "AI Agent Architectures",
+    "description": "Building multi-step agent workflows with tool use and retrieval — n8n, OpenAI, and Claude in production pipelines.",
+    "progress": "In progress"
+  },
+  {
+    "id": "cloud",
+    "icon": "Cloud",
+    "title": "Cloud & Infrastructure",
+    "description": "Deepening AWS fundamentals, container orchestration, and CI/CD practices beyond single-service deploys.",
+    "progress": "Ongoing"
+  },
+  {
+    "id": "system-design",
+    "icon": "Workflow",
+    "title": "Distributed System Design",
+    "description": "Studying event-driven patterns, caching strategies, and real-time architecture past the SignalR work I ship today.",
+    "progress": "Ongoing"
+  }
+]

@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import type { ComponentType } from "react"
 import { ArrowRight, ExternalLink, LayoutTemplate, ServerCog, Smartphone } from "lucide-react"
 import { motion } from "framer-motion"
@@ -14,10 +15,12 @@ const skillBadgeIcons: Record<string, ComponentType<{ size?: number }>> = {
   Smartphone,
 }
 
+// Spaced around the edges of the artwork rather than over it, so they read as
+// floating chips instead of overlapping the illustration.
 const skillBadgePositions = [
-  "-top-3 -right-5",
-  "top-[42%] -left-9 -translate-y-1/2",
-  "bottom-6 -right-9",
+  "-top-7 right-14",
+  "top-1/2 -left-8 -translate-y-1/2",
+  "bottom-12 -right-8",
 ]
 
 const skillBadgeDelays = [0, 0.5, 1]
@@ -47,26 +50,27 @@ const socialIconClass = [
 
 export default function Hero() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden flex flex-col lg:min-h-svh">
 
       {/* Ambient glow */}
       <div className="absolute top-[5%] left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-[radial-gradient(ellipse,var(--glow)_0%,transparent_65%)] pointer-events-none z-0" />
 
       {/* Hero grid */}
-      <div className="grid grid-cols-2 gap-10 lg:gap-16 min-h-svh max-w-[1160px] mx-auto pt-[calc(60px+60px)] px-4 sm:px-6 pb-[130px] items-center relative z-[1] max-lg:grid-cols-1 max-lg:min-h-0 max-sm:pt-[68] max-sm:pb-12">
+      <div className="grid grid-cols-2 gap-10 lg:gap-16 flex-1 max-w-[1160px] mx-auto pt-[calc(60px+60px)] px-4 sm:px-6 pb-10 items-center relative z-[1] max-lg:grid-cols-1 max-sm:pt-[68] max-sm:pb-12 [@media(max-height:820px)]:pt-[calc(60px+24px)] [@media(max-height:820px)]:pb-4">
 
         {/* ── LEFT ── */}
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, ease: "easeOut" }}
+          className="max-lg:text-center"
         >
           {/* Availability pill */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="inline-flex items-center gap-2 py-[5px] pr-[14px] pl-2 bg-card border border-border2 rounded-full text-[0.78rem] font-semibold text-text2 mb-[22px]"
+            className="inline-flex items-center gap-2 py-[5px] pr-[14px] pl-2 bg-card border border-border2 rounded-full text-[0.78rem] font-semibold text-text2 mb-[22px] [@media(max-height:820px)]:mb-3"
           >
             <span className="flex items-center gap-1.5 rounded-full py-[2px] px-2 text-[0.7rem] font-bold" style={{ background: "var(--success-light)", border: "1px solid var(--success-border)", color: "var(--success)" }}>
               <span
@@ -85,12 +89,12 @@ export default function Hero() {
           </div>
 
           {/* Role tag */}
-          <div className="text-[0.75rem] font-bold tracking-[0.08em] uppercase text-primary mb-3.5">
+          <div className="text-[0.75rem] font-bold tracking-[0.08em] uppercase text-primary mb-3.5 [@media(max-height:820px)]:mb-2">
             {heroData.role}
           </div>
 
           {/* H1 */}
-          <h1 className="text-[clamp(2rem,7vw,4rem)] font-extrabold leading-[1.08] tracking-[-0.035em] text-text mb-[22px]">
+          <h1 className="text-[clamp(2rem,7vw,4rem)] [@media(max-height:820px)]:text-[clamp(1.75rem,6vw,2.75rem)] font-extrabold leading-[1.08] tracking-[-0.035em] text-text mb-[22px] [@media(max-height:820px)]:mb-3">
             {heroData.headline}
             <br />
             <span className="text-primary">{heroData.headlineAccent}</span>
@@ -98,12 +102,12 @@ export default function Hero() {
 
           {/* Description */}
           <p
-            className="text-[0.95rem] text-text2 leading-[1.75] max-w-[460px] mb-4"
+            className="text-[0.95rem] text-text2 leading-[1.75] max-w-[460px] mb-4 max-lg:mx-auto"
             dangerouslySetInnerHTML={{ __html: heroData.description }}
           />
 
           {/* Tech stack chips */}
-          <div className="flex gap-[7px] flex-wrap mb-8">
+          <div className="flex gap-[7px] flex-wrap mb-8 [@media(max-height:820px)]:mb-4 max-lg:justify-center">
             {heroData.techStack.map((tech) => (
               <span
                 key={tech}
@@ -115,18 +119,18 @@ export default function Hero() {
           </div>
 
           {/* CTA buttons */}
-          <div className="flex gap-3 flex-wrap mb-7">
-            <a href={heroData.cta.primary.href} className="btn-primary-lg">
+          <div className="flex gap-3 flex-wrap mb-7 [@media(max-height:820px)]:mb-4 max-lg:justify-center">
+            <Link href={heroData.cta.primary.href} className="btn-primary-lg">
               {heroData.cta.primary.label}
               <ArrowRight size={16} />
-            </a>
+            </Link>
             <a href={heroData.cta.secondary.href} className="btn-ghost-lg">
               {heroData.cta.secondary.label}
             </a>
           </div>
 
           {/* Bottom row: stats + socials */}
-          <div className="flex items-center gap-4 sm:gap-5 flex-wrap">
+          <div className="flex items-center gap-4 sm:gap-5 flex-wrap max-lg:justify-center">
             {/* Quick stats */}
             <div className="flex">
               {heroData.quickStats.map((s, i) => (
@@ -168,30 +172,21 @@ export default function Hero() {
           transition={{ duration: 0.75, delay: 0.18, ease: "easeOut" }}
           className="flex justify-end relative max-lg:hidden"
         >
-          <div className="relative w-[400px] h-[400px]">
+          <div className="relative w-[470px] h-[313px]">
 
-            {/* Glow blob behind photo */}
-            <div className="absolute -inset-8 bg-[radial-gradient(ellipse,var(--primary-light)_0%,transparent_68%)] blur-[28px] z-0 rounded-full" />
+            {/* Glow blob behind artwork */}
+            <div className="absolute -inset-10 bg-[radial-gradient(ellipse,var(--primary-light)_0%,transparent_68%)] blur-[28px] z-0 rounded-full" />
 
-            {/* Decorative broken arc ring */}
-            <div
-              className="absolute -inset-4 rounded-full z-0"
-              style={{
-                background:
-                  "conic-gradient(from -90deg, var(--primary) 0deg, var(--primary) 55deg, transparent 75deg, transparent 150deg, var(--primary-hover) 150deg, var(--primary-hover) 245deg, transparent 265deg, transparent 360deg)",
-                WebkitMask:
-                  "radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px))",
-                mask: "radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px))",
-              }}
-            />
-
-            {/* Photo */}
-            <div className="relative z-[1] w-full h-full rounded-full overflow-hidden bg-[var(--primary-light)] border border-border2 shadow-[var(--shadow-xl)]">
+            {/* Artwork — transparent PNG/WebP, so it floats on the page in both
+                themes with no panel or frame around it. object-contain keeps the
+                whole composition visible rather than cropping it. */}
+            <div className="relative z-[1] w-full h-full">
               <Image
                 src={heroData.photo}
-                alt="Jay Clark Anore"
+                alt={heroData.photoAlt}
                 fill
-                className="object-cover"
+                sizes="470px"
+                className="object-contain"
                 priority
               />
             </div>
@@ -217,27 +212,13 @@ export default function Hero() {
               )
             })}
 
-            {/* Available badge — bottom center */}
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 z-[3]">
-              <motion.div
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                className="bg-primary rounded-full py-[6px] px-[18px] text-[0.73rem] font-bold text-white flex items-center gap-[7px] whitespace-nowrap shadow-[0_4px_16px_rgba(59,158,245,0.4)]"
-              >
-                <span
-                  className="w-1.5 h-1.5 rounded-full bg-white shrink-0"
-                  style={{ animation: "pulse-dot 1.6s infinite" }}
-                />
-                {heroData.badge}
-              </motion.div>
-            </div>
           </div>
         </motion.div>
       </div>
 
-      {/* Tech marquee — pinned to bottom of hero viewport */}
-      <div className="absolute bottom-0 left-0 right-0 z-[2] max-sm:hidden">
+      {/* Tech marquee — sits at the bottom of the hero's flex column, so it's
+          always right after the content instead of floating past the fold */}
+      <div className="shrink-0 max-sm:hidden">
         <TechMarquee />
       </div>
     </div>

@@ -1,35 +1,28 @@
 {
   "links": [
-    { "label": "Skills", "href": "#skills" },
-    { "label": "Projects", "href": "#projects" },
-    { "label": "Services", "href": "#services" },
-    {
-      "label": "About",
-      "dropdown": [
-        { "label": "Work Experience", "description": "Career history", "href": "#experience" },
-        { "label": "Testimonials", "description": "What clients say", "href": "#testimonials" }
-      ]
-    },
-    { "label": "FAQ's", "href": "#faq" },
-    { "label": "Contact", "href": "#contact" }
+    { "label": "Home",      "href": "/" },
+    { "label": "About Me",  "href": "/about" },
+    { "label": "Portfolio", "href": "/portfolio" },
+    { "label": "Services",  "href": "/services" },
+    { "label": "Contact",   "href": "/#contact" }
   ],
   "footerColumns": [
     {
       "heading": "Work",
       "links": [
-        { "label": "Projects",   "href": "#projects" },
-        { "label": "Skills",   "href": "#skills" },
-        { "label": "Services",   "href": "#services" },
-        { "label": "Work Experience", "href": "#experience" }
+        { "label": "Portfolio",       "href": "/portfolio" },
+        { "label": "Services",        "href": "/services" },
+        { "label": "Skills",          "href": "/about#skills" },
+        { "label": "Work Experience", "href": "/about#experience" }
       ]
     },
     {
       "heading": "Me",
       "links": [
-        { "label": "About",        "href": "#services" },
-        { "label": "Education",        "href": "#education" },
-        { "label": "Testimonials", "href": "#testimonials" },
-        { "label": "FAQ's",          "href": "#faq" }
+        { "label": "About Me",     "href": "/about" },
+        { "label": "Certificates", "href": "/about#certificates" },
+        { "label": "Testimonials", "href": "/#testimonials" },
+        { "label": "FAQ's",        "href": "/services#faq" }
       ]
     }
   ]

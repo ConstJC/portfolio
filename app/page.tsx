@@ -1,46 +1,33 @@
-import Navbar from "@/components/layout/Navbar"
-import Footer from "@/components/layout/Footer"
-import FloatingActions from "@/components/layout/FloatingActions"
+import type { Metadata } from "next"
 import Hero from "@/components/sections/Hero"
 import Ways from "@/components/sections/Ways"
-import Steps from "@/components/sections/Steps"
-import Skills from "@/components/sections/Skills"
 import Projects from "@/components/sections/Projects"
-import ExperienceEducation from "@/components/sections/ExperienceEducation"
-import Services from "@/components/sections/Services"
 import Testimonials from "@/components/sections/Testimonials"
-import Faq from "@/components/sections/Faq"
 import Cta from "@/components/sections/Cta"
+import { jsonLdScript, personJsonLd } from "@/lib/jsonld"
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+}
 
 export default function Home() {
   return (
-    <div className="page">
-      <Navbar />
-      <main>
-        <Hero />
-        <div className="sep" />
-        <Ways />
-        <div className="sep" />
-        {/* <Stats />
-        <div className="sep" /> */}
-        <Steps />
-        <div className="sep" />
-        <Skills />
-        <div className="sep" />
-        <Projects />
-        <div className="sep" />
-        <ExperienceEducation />
-        <div className="sep" />
-        <Services />
-        <div className="sep" />
-        <Testimonials />
-        <div className="sep" />
-        <Faq />
-        <div className="sep" />
-        <Cta />
-      </main>
-      <Footer />
-      <FloatingActions />
-    </div>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(personJsonLd)} />
+      <Hero />
+      <div className="sep" />
+      <Ways />
+      <div className="sep" />
+      <Projects
+        limit={3}
+        eyebrow="Selected Work"
+        title="Featured Projects"
+        showViewAll
+      />
+      <div className="sep" />
+      <Testimonials />
+      <div className="sep" />
+      <Cta />
+    </>
   )
 }

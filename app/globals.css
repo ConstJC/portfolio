@@ -160,8 +160,19 @@
    ══════════════════════════════════════════════ */
 
 html {
-  scroll-behavior: smooth;
   overflow-x: hidden;
+  /* Keeps #hash targets clear of the 64px fixed navbar (56px under md). */
+  scroll-padding-top: 5rem;
+}
+
+/* Smooth only for in-page anchors — without the media query every client-side
+   route change would animate a long scroll back to the top. */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+@media (max-width: 767px) {
+  html { scroll-padding-top: 4.5rem; }
 }
 
 body {

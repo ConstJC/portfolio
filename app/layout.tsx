@@ -2,7 +2,9 @@ import type { Metadata, Viewport } from "next"
 import { Plus_Jakarta_Sans } from "next/font/google"
 import "./globals.css"
 import BFCacheGuard from "@/components/layout/BFCacheGuard"
-import siteData from "@/store/site.json"
+import Navbar from "@/components/layout/Navbar"
+import Footer from "@/components/layout/Footer"
+import FloatingActions from "@/components/layout/FloatingActions"
 import { SITE_URL } from "@/lib/seo"
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -15,7 +17,10 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Jay Clark Anore — Full-Stack Developer & Designer",
+  title: {
+    default: "Jay Clark Anore — Full-Stack Developer & Designer",
+    template: "%s — Jay Clark Anore",
+  },
   description:
     "Full Stack Developer crafting scalable web & mobile apps — from pixel-perfect frontends to robust APIs and real-time systems. Based in Cebu, PH.",
   keywords: [
@@ -32,9 +37,6 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Jay Clark Anore", url: SITE_URL }],
   creator: "Jay Clark Anore",
-  alternates: {
-    canonical: "/",
-  },
   robots: {
     index: true,
     follow: true,
@@ -63,32 +65,6 @@ export const viewport: Viewport = {
   themeColor: "#0A1020",
 }
 
-const personJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: siteData.name,
-  alternateName: siteData.handle,
-  jobTitle: siteData.tagline,
-  url: SITE_URL,
-  image: `${SITE_URL}/images/pf-transparent.png`,
-  email: `mailto:${siteData.email}`,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Cebu City",
-    addressCountry: "PH",
-  },
-  worksFor: {
-    "@type": "Organization",
-    name: siteData.currentEmployer,
-  },
-  sameAs: [
-    siteData.socials.github,
-    siteData.socials.linkedin,
-    siteData.socials.facebook,
-    siteData.socials.instagram,
-  ],
-}
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -97,14 +73,18 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark" className={plusJakarta.variable} suppressHydrationWarning>
       <body className="min-h-full antialiased" suppressHydrationWarning>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
-        />
         {/* Runs before React hydration: reload on back/forward so Framer Motion starts fresh */}
         <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=performance.navigation&&performance.navigation.type;if(t===2){window.location.reload();return;}var e=performance.getEntriesByType&&performance.getEntriesByType('navigation');if(e&&e.length&&e[0].type==='back_forward'){window.location.reload();}}catch(ex){}})();` }} />
         <BFCacheGuard />
-        {children}
+
+        {/* Shared chrome — lives in the layout so it survives client-side route
+            transitions (theme state included) instead of remounting per page. */}
+        <div className="page">
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+          <FloatingActions />
+        </div>
       </body>
     </html>
   )

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "cct-usc",
+    "title": "Certificate in Computer Technology",
+    "issuer": "University of San Carlos — Talamban Campus",
+    "date": "Feb 2025",
+    "type": "certificate",
+    "description": "Three-year technical program majoring in Software Development — data structures, algorithms, database design, and application development.",
+    "credentialUrl": null
+  },
+  {
+    "id": "capstone-recognition",
+    "title": "Capstone Project Recognition",
+    "issuer": "University of San Carlos",
+    "date": "Feb 2025",
+    "type": "recognition",
+    "description": "Recognized for Paanakan sa Mandaue — a clinic birthing-center management system delivered as the program capstone.",
+    "credentialUrl": null
+  },
+  {
+    "id": "ml-fundamentals-cody",
+    "title": "Machine Learning Fundamentals",
+    "issuer": "Cody Web Development Inc.",
+    "date": "Nov 2025",
+    "type": "certificate",
+    "description": "Training covering core machine learning concepts, model workflows, and practical applications.",
+    "credentialUrl": null
+  },
+  {
+    "id": "genai-training-cody",
+    "title": "Generative AI Training",
+    "issuer": "Cody Web Development Inc.",
+    "date": "Nov 2025",
+    "type": "certificate",
+    "description": "Hands-on training on generative AI tools and workflows, including practical use in software development.",
+    "credentialUrl": null
+  }
+]
