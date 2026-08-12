@@ -1,23 +1,12 @@
 [
   {
-    "id": "linque",
-    "emoji": "🔢",
-    "badge": "Queue System",
-    "title": "LinQue",
-    "description": "Smart queuing system with multiple category support — Inquiries, Transactions, and more. Real-time queue updates powered by SignalR for seamless client flow management.",
-    "techs": ["C# .NET", "SignalR", "SQL Server", "jQuery"],
-    "liveUrl": "#",
-    "sourceUrl": "#",
-    "thumbVariant": "pt-1"
-  },
-  {
     "id": "emr",
     "emoji": "🏥",
     "badge": "Healthcare",
     "title": "EMR Web App",
     "description": "Electronic Medical Records system for patient management. Covers admission, outpatient, billing, and clinical records with an intuitive interface for clinic staff.",
     "techs": ["Next.js", "NestJS", "Prisma", "TypeScript"],
-    "liveUrl": "#",
+    "liveUrl": "https://ehealth-app.vercel.app/",
     "sourceUrl": "#",
     "thumbVariant": "pt-2",
     "images": [
@@ -33,7 +22,7 @@
     "title": "RentHub",
     "description": "Cross-platform rental management system for boarding houses and apartments. Features unit tracking, billing, tenant management, and a mobile app for landlords on the go.",
     "techs": ["Next.js", "React Native", "NestJS", "Prisma"],
-    "liveUrl": "#",
+    "liveUrl": "https://renthub.vercel.app/",
     "sourceUrl": "#",
     "thumbVariant": "pt-5",
     "images": [
@@ -49,8 +38,19 @@
     "title": "Clinic Birthing Center",
     "description": "Clinic and birthing center management system covering patient admission, outpatient services, billing, and medical records. Built to streamline healthcare workflows and improve patient data management.",
     "techs": ["C# .NET", "SQL Server", "SignalR", "jQuery"],
-    "liveUrl": "#",
+    "liveUrl": "https://paanakan-app.vercel.app/",
     "sourceUrl": "#",
     "thumbVariant": "pt-3"
+  },
+  {
+    "id": "linque",
+    "emoji": "🔢",
+    "badge": "Queue System",
+    "title": "LinQue",
+    "description": "Smart queuing system with multiple category support — Inquiries, Transactions, and more. Real-time queue updates powered by SignalR for seamless client flow management.",
+    "techs": ["C# .NET", "SignalR", "SQL Server", "jQuery"],
+    "liveUrl": "#",
+    "sourceUrl": "#",
+    "thumbVariant": "pt-1"
   }
 ]
