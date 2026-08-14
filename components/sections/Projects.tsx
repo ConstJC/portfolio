@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { createPortal } from "react-dom"
 import { motion } from "framer-motion"
 import { ArrowRight, ChevronLeft, ChevronRight, Code2, ExternalLink, Maximize2, X } from "lucide-react"
@@ -12,6 +12,7 @@ const thumbGradients: Record<string, string> = {
   "pt-1": "var(--grad-azure)",
   "pt-2": "var(--grad-teal)",
   "pt-3": "var(--grad-amber)",
+  "pt-4": "var(--grad-rose)",
   "pt-5": "var(--grad-violet)",
 }
 
@@ -97,6 +98,9 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   const hasImages = images.length > 0
   const [activeImage, setActiveImage] = useState(0)
   const [isPreviewOpen, setIsPreviewOpen] = useState(false)
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false)
+  const [isDescriptionClamped, setIsDescriptionClamped] = useState(false)
+  const descriptionRef = useRef<HTMLDivElement>(null)
 
   const showPrevious = () => {
     setActiveImage((current) => (current === 0 ? images.length - 1 : current - 1))
@@ -143,6 +147,33 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       window.removeEventListener("keydown", handleKeyDown)
     }
   }, [images.length, isPreviewOpen])
+
+  useEffect(() => {
+    if (!isDetailsOpen) return
+
+    const originalOverflow = document.body.style.overflow
+    document.body.style.overflow = "hidden"
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsDetailsOpen(false)
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown)
+
+    return () => {
+      document.body.style.overflow = originalOverflow
+      window.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [isDetailsOpen])
+
+  useEffect(() => {
+    const node = descriptionRef.current
+    if (!node) return
+
+    setIsDescriptionClamped(node.scrollHeight > node.clientHeight + 1)
+  }, [project.description])
 
   return (
     <>
@@ -226,8 +257,22 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         <div className="font-bold text-[0.97rem] mb-1.5 leading-[1.35] text-text">
           {project.title}
         </div>
-        <div className="text-[0.8rem] text-text2 leading-[1.6] mb-3.5">
-          {project.description}
+        <div className="mb-3.5">
+          <div
+            ref={descriptionRef}
+            className="text-[0.8rem] text-text2 leading-[1.6] line-clamp-4 min-h-[5.12rem]"
+          >
+            {project.description}
+          </div>
+          {isDescriptionClamped && (
+            <button
+              type="button"
+              onClick={() => setIsDetailsOpen(true)}
+              className="mt-1 text-[0.75rem] font-bold text-primary transition-opacity duration-150 hover:opacity-80"
+            >
+              View more
+            </button>
+          )}
         </div>
 
         {/* Footer */}
@@ -352,6 +397,73 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               ))}
             </div>
           ) : null}
+        </div>,
+        document.body
+      ) : null}
+
+      {isDetailsOpen ? createPortal(
+        <div
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${project.title} full details`}
+          onClick={() => setIsDetailsOpen(false)}
+        >
+          <div
+            className="relative max-h-[85vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-sm)]"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setIsDetailsOpen(false)}
+              className="absolute right-4 top-4 grid size-9 place-items-center rounded-full bg-card2 border border-border text-text2 transition-colors hover:text-text hover:border-primary-border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              aria-label={`Close ${project.title} full details`}
+            >
+              <X size={16} aria-hidden="true" />
+            </button>
+
+            <div className="text-[0.74rem] font-bold uppercase tracking-[0.1em] text-text3 mb-1.5">
+              {project.badge}
+            </div>
+            <div className="text-lg font-bold leading-tight text-text mb-3 pr-8">
+              {project.title}
+            </div>
+            <div className="text-[0.85rem] leading-[1.7] text-text2 mb-4">
+              {project.description}
+            </div>
+            <div className="flex gap-[5px] flex-wrap mb-5">
+              {project.techs.map((t) => (
+                <span
+                  key={t}
+                  className="py-[3px] px-2 bg-card2 border border-border rounded-[4px] text-[0.67rem] font-bold text-text2"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+            <div className="flex gap-2">
+              {project.liveUrl && project.liveUrl !== "#" ? (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-1.5 py-[7px] px-3 rounded-lg bg-card2 border border-border text-[0.73rem] font-bold text-text2 no-underline transition-colors duration-150 hover:text-text hover:border-primary-border"
+                >
+                  <ExternalLink size={12} /> View Live
+                </a>
+              ) : null}
+              {project.sourceUrl && project.sourceUrl !== "#" ? (
+                <a
+                  href={project.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-1.5 py-[7px] px-3 rounded-lg bg-primary text-[0.73rem] font-bold text-white no-underline transition-opacity duration-150 hover:opacity-85"
+                >
+                  <Code2 size={12} /> Source Code
+                </a>
+              ) : null}
+            </div>
+          </div>
         </div>,
         document.body
       ) : null}

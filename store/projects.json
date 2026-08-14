@@ -1,5 +1,21 @@
 [
   {
+    "id": "cartivo",
+    "emoji": "🛍️",
+    "badge": "Marketplace",
+    "title": "Cartivo",
+    "description": "Hyperlocal marketplace connecting Philippine buyers with local shops and service providers — product commerce, pickleball court & service bookings, seller subscriptions, and a voucher/rewards wallet in one platform. I own the Products Management System end-to-end (ERD → REST API → implementation) and built the full Maya payment integration: webhook handling, idempotency, stale-session watchdogs, and refund reconciliation across four checkout flows.",
+    "techs": ["NestJS", "Next.js", "Flutter", "PostgreSQL", "Maya API"],
+    "liveUrl": "https://cartivo.ph",
+    "sourceUrl": "#",
+    "thumbVariant": "pt-2",
+    "images": [
+      "/images/cartivo-1.png",
+      "/images/cartivo-2.png",
+      "/images/cartivo-3.png"
+    ]
+  },
+  {
     "id": "emr",
     "emoji": "🏥",
     "badge": "Healthcare",
@@ -8,7 +24,7 @@
     "techs": ["Next.js", "NestJS", "Prisma", "TypeScript"],
     "liveUrl": "https://ehealth-app.vercel.app/",
     "sourceUrl": "#",
-    "thumbVariant": "pt-2",
+    "thumbVariant": "pt-4",
     "images": [
       "/images/eHealth-login.png",
       "/images/eHealth-dashboard.png",

@@ -8,7 +8,7 @@
     "type": "Hybrid",
     "status": "current",
     "logoUrl": "/images/cody-logo.png",
-    "description": "Building full-stack web and mobile applications using Next.js, NestJS, Flutter, and C#. Working with AI coding tools (Claude Code, Cursor, Codex) for accelerated development with proper planning, Prisma for DB management, and WebSockets for real-time features.",
+    "description": "Building full-stack web and mobile applications using Next.js, NestJS, Flutter, and C#. Own the Products Management System and the end-to-end Maya payment integration for Cartivo (formerly Adtokart), a hyperlocal marketplace and booking platform. Working with AI coding tools (Claude Code, Cursor, Codex) for accelerated development with proper planning, Prisma for DB management, and WebSockets for real-time features.",
     "techs": ["Next.js", "NestJS", "Flutter", "C#", "Prisma", "WebSockets", "FCM"]
   },
   {

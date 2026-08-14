@@ -59,6 +59,7 @@
   --grad-teal:   linear-gradient(135deg, #134E4A 0%, #0A1614 100%);
   --grad-violet: linear-gradient(135deg, #2E2257 0%, #131022 100%);
   --grad-amber:  linear-gradient(135deg, #4A371A 0%, #1A1308 100%);
+  --grad-rose:   linear-gradient(135deg, #5C2340 0%, #1A0A14 100%);
 }
 
 /* LIGHT THEME — improved palette */
@@ -114,6 +115,7 @@
   --grad-teal:   linear-gradient(135deg, #E2F7F4 0%, #FFFFFF 100%);
   --grad-violet: linear-gradient(135deg, #EFEAFB 0%, #FFFFFF 100%);
   --grad-amber:  linear-gradient(135deg, #FBF1E2 0%, #FFFFFF 100%);
+  --grad-rose:   linear-gradient(135deg, #FBE7F0 0%, #FFFFFF 100%);
 }
 
 /* ══════════════════════════════════════════════
