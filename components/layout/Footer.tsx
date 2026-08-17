@@ -74,7 +74,7 @@ export default function Footer() {
           <div>
             <h4 className={colHeading}>Get in Touch</h4>
             <p className="text-[0.8rem] text-text2 leading-[1.6]">
-              Available for freelance projects, full-time roles, and collaborations. Let&apos;s build something great together.
+              Available for freelance projects, full-time roles, and collaborations — always glad to talk through a system that needs building.
             </p>
             <a
               href={`mailto:${siteData.email}`}

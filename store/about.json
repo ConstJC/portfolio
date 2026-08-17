@@ -1,8 +1,8 @@
 {
   "hero": {
     "photo": "/images/pf.png",
-    "role": "Full-Stack Developer | Mobile Engineer | Application Security Specialist | AI-Powered Systems Builder",
-    "intro": "I build secure, scalable web and mobile applications with modern technologies, cloud infrastructure, and security-first development practices.",
+    "role": "Software Engineer | Backend & Systems Architecture | Full-Stack, Mobile & AI-Assisted Development",
+    "intro": "I build backend systems and business software for companies with real operational complexity — multi-step workflows, multiple user roles, payments that need to reconcile correctly. Full-stack, mobile, security, and AI-assisted delivery are all part of the toolkit; backend and architecture are where I go deep.",
     "pills": [
       { "icon": "MapPin",    "label": "Philippines" },
       { "icon": "Globe",     "label": "Remote Worldwide" },
@@ -13,17 +13,17 @@
   "summary": {
     "eyebrow": "Professional Summary",
     "title": "About Me",
-    "lede": "2+ years building production software across full-stack, mobile, security, and AI.",
+    "lede": "2+ years building production software — full-stack, mobile, security, and AI — for businesses with real operational complexity.",
     "cards": [
       {
         "id": "full-stack",
         "title": "Full-Stack Development",
-        "description": "End-to-end web applications with React, Next.js, Node.js, and PostgreSQL — from architecture to deployment."
+        "description": "End-to-end web applications with React, Next.js, Node.js, and PostgreSQL — architected for real business workflows, not just CRUD screens, from database to deployment."
       },
       {
         "id": "mobile",
         "title": "Mobile Development",
-        "description": "Cross-platform apps with React Native and Flutter, optimized for performance and native-like UX."
+        "description": "Cross-platform apps with React Native and Flutter that work as an operational tool for a business, not just a customer-facing extra — built for performance and native-like UX."
       },
       {
         "id": "security",
@@ -33,12 +33,12 @@
       {
         "id": "cloud",
         "title": "Cloud Technologies",
-        "description": "AWS, Vercel, Docker, and CI/CD pipelines for reliable, repeatable deployments at scale."
+        "description": "AWS, Vercel, Docker, and CI/CD pipelines — infrastructure that stays reliable as a business's usage and complexity grow, not just at launch."
       },
       {
         "id": "ai",
         "title": "AI-Assisted Development",
-        "description": "OpenAI APIs, Claude, and AI workflow automation woven into real product and delivery pipelines."
+        "description": "OpenAI APIs, Claude, and AI workflow automation built into the actual delivery pipeline — used to design and ship business systems faster."
       }
     ]
   }

@@ -27,7 +27,7 @@
   {
     "id": "specialize",
     "question": "What do you specialize in?",
-    "answer": "I specialize in full-stack development, building modern web applications with strong backend systems using .NET or Node.js and scalable frontend technologies."
+    "answer": "I specialize in backend systems and business software — architecture, APIs, and data models for products with real operational complexity, like multi-role platforms, bookings, and payments. The frontend and mobile work builds on top of that same foundation."
   },
   {
     "id": "tech-stack",

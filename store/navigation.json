@@ -4,6 +4,7 @@
     { "label": "About Me",  "href": "/about" },
     { "label": "Portfolio", "href": "/portfolio" },
     { "label": "Services",  "href": "/services" },
+    { "label": "Writing",   "href": "/writing" },
     { "label": "Contact",   "href": "/#contact" }
   ],
   "footerColumns": [
@@ -12,6 +13,7 @@
       "links": [
         { "label": "Portfolio",       "href": "/portfolio" },
         { "label": "Services",        "href": "/services" },
+        { "label": "Writing",         "href": "/writing" },
         { "label": "Skills",          "href": "/about#skills" },
         { "label": "Work Experience", "href": "/about#experience" }
       ]

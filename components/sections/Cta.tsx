@@ -108,7 +108,7 @@ export default function Cta() {
               {[
                 { icon: <Mail size={15} />, label: "Email", value: siteData.email },
                 { icon: <MapPin size={15} />, label: "Location", value: siteData.location },
-                { icon: <Clock size={15} />, label: "Availability", value: "Open to freelance" },
+                { icon: <Clock size={15} />, label: "Availability", value: "Available Immediately" },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-3 py-3 px-4 bg-card border border-border2 rounded-[10px]">
                   <span className="w-8 h-8 rounded-lg shrink-0 bg-primary-light border border-primary-border flex items-center justify-center text-primary">

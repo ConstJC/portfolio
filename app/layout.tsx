@@ -18,15 +18,17 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Jay Clark Anore — Full-Stack Developer & Designer",
+    default: "Jay Clark Anore — Software Engineer Building Business Systems",
     template: "%s — Jay Clark Anore",
   },
   description:
-    "Full Stack Developer crafting scalable web & mobile apps — from pixel-perfect frontends to robust APIs and real-time systems. Based in Cebu, PH.",
+    "Software engineer building backend systems and business software for operationally complex companies — bookings, marketplaces, multi-role platforms. Based in Cebu, PH.",
   keywords: [
     "Jay Clark Anore",
     "Jayclark Anore",
-    "Full Stack Developer",
+    "Software Engineer",
+    "Backend Architecture",
+    "Business Systems",
     "Next.js",
     "NestJS",
     ".NET CORE",
@@ -46,9 +48,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Jay Clark Anore — Full-Stack Developer & Designer",
+    title: "Jay Clark Anore — Software Engineer Building Business Systems",
     description:
-      "Full Stack Developer crafting scalable web & mobile apps. Based in Cebu, PH.",
+      "Software engineer building backend systems and business software for operationally complex companies. Based in Cebu, PH.",
     url: SITE_URL,
     siteName: "Jay Clark Anore",
     type: "website",
@@ -56,8 +58,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jay Clark Anore — Full-Stack Developer & Designer",
-    description: "Full Stack Developer crafting scalable web & mobile apps. Based in Cebu, PH.",
+    title: "Jay Clark Anore — Software Engineer Building Business Systems",
+    description:
+      "Software engineer building backend systems and business software for operationally complex companies. Based in Cebu, PH.",
   },
 }
 

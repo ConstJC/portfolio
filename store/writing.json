@@ -1,0 +1,44 @@
+{
+  "intro": {
+    "eyebrow": "Writing",
+    "title": "Notes From the",
+    "titleAccent": "Build",
+    "description": "I'm building toward writing regularly about the engineering and business problems that show up once real systems are running — bookings, payments, multi-tenant architecture, and the parts of software that get complicated the moment an actual business depends on them.",
+    "statusLine": "Nothing's published here yet. Consider this page a public commitment rather than a placeholder — as I write, it goes here first."
+  },
+  "pillars": [
+    {
+      "id": "engineering",
+      "icon": "Code2",
+      "name": "Engineering",
+      "description": "The backend and architecture decisions behind systems I've actually built, and the reasoning behind them.",
+      "topics": [
+        "How I Designed RBAC for a Multi-Tenant Application",
+        "Practical PostgreSQL Indexing for SaaS Applications",
+        "Idempotency and Webhooks: What Building the Maya Payment Integration Taught Me"
+      ]
+    },
+    {
+      "id": "system-design",
+      "icon": "Workflow",
+      "name": "System Design",
+      "description": "How I'd approach designing systems for common but genuinely hard problems, before a single line of code.",
+      "topics": [
+        "How I'd Design a Booking System That Prevents Double-Booking",
+        "Designing a Notification System for a Marketplace With Multiple Sellers",
+        "Designing a Multi-Tenant Backend With NestJS and PostgreSQL"
+      ]
+    },
+    {
+      "id": "business-engineering",
+      "icon": "Briefcase",
+      "name": "Business + Engineering",
+      "description": "Where technical decisions and business reality collide — and why the simple version of a feature rarely survives contact with a real business.",
+      "topics": [
+        "Why a Simple Booking Feature Gets Complicated Once Multiple Merchants Are Involved",
+        "The Difference Between Building Software and Building a Business",
+        "What Refund Reconciliation Taught Me About Trust in a Marketplace"
+      ]
+    }
+  ]
+}
