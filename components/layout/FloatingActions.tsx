@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import { ArrowUp, Monitor, Moon, Sun, type LucideIcon } from "lucide-react"
 import { useTheme, type Theme } from "@/hooks/useTheme"
+import ChatWidget from "@/components/chat/ChatWidget"
 
 const themeOptions: Array<{ value: Theme; label: string; Icon: LucideIcon }> = [
   { value: "light", label: "Light", Icon: Sun },
@@ -54,6 +55,8 @@ export default function FloatingActions() {
 
   return (
     <div className="fixed bottom-7 right-6 z-[200] flex flex-col gap-2.5 items-center">
+      <ChatWidget />
+
       <div ref={menuRef} className="relative">
         <button
           onClick={() => setMenuOpen((open) => !open)}

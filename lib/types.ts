@@ -87,3 +87,8 @@ export interface FaqItem {
   answer: string
   defaultOpen?: boolean
 }
+
+export interface ChatMessage {
+  role: "user" | "assistant"
+  content: string
+}
