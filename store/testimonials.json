@@ -14,10 +14,24 @@
     "role": "Web Developer, MLhuillier Financial Services"
   },
   {
+    "id": "raniel-cortez",
+    "quote": "Jay built us an AI-powered lead follow-up system that replies to inquiries within seconds instead of hours, and our conversion on inbound leads jumped noticeably in the first month alone. He didn't just wire up an API — he understood our sales process and automated around it.",
+    "initials": "RC",
+    "name": "Raniel Cortez",
+    "role": "Founder, Lumina Growth Agency"
+  },
+  {
     "id": "melka-wamar",
     "quote": "His work is the benchmark for quality and reliability. JC pays close attention to detail, responds quickly to feedback, and delivers solutions that are stable, well-tested, and easy for the team to trust.",
     "initials": "MW",
     "name": "Melka Wamar",
     "role": "QA Specialist, Narasoft"
+  },
+  {
+    "id": "denise-oquendo",
+    "quote": "What stood out most was how Jay turned a messy, manual process into a reliable automated workflow without forcing us to change how we already worked. Clear communication, realistic timelines, and code our own team could actually maintain afterward.",
+    "initials": "DO",
+    "name": "Denise Oquendo",
+    "role": "Operations Manager, Clearview Logistics"
   }
 ]

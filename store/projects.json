@@ -68,5 +68,38 @@
     "liveUrl": "#",
     "sourceUrl": "#",
     "thumbVariant": "pt-1"
+  },
+  {
+    "id": "jcode-leads-ai",
+    "emoji": "📥",
+    "badge": "AI Automation",
+    "title": "JCode Leads AI",
+    "description": "Every submission on this site's contact form is a warm lead, and the worst thing that can happen to one is sitting unread in an inbox for a day. I built JCode Leads AI, an automation wired directly into my own contact form: the moment a visitor submits it, the entry is appended to a running Excel sheet — name, contact details, project type, and message — an email notification lands in my inbox with the full submission, and a text message goes straight to my phone so I see it within minutes, wherever I am, instead of whenever I next check email. Built with n8n, the Google Sheets API, Nodemailer, and Twilio for SMS, it makes sure no inbound lead from this site goes more than a few minutes without me knowing about it.",
+    "techs": ["n8n", "Google Sheets API", "Nodemailer", "Twilio", "Next.js"],
+    "liveUrl": "#",
+    "sourceUrl": "#",
+    "thumbVariant": "pt-1"
+  },
+  {
+    "id": "jobscout-ai",
+    "emoji": "🔍",
+    "badge": "AI Automation",
+    "title": "JobScout AI",
+    "description": "Job hunting eats hours a day if you're checking LinkedIn manually — new postings show up at random times, and titles rarely match reality, so half the listings you open aren't even relevant. I built JobScout AI, a scheduled automation that triggers every evening at 6 PM, pulls new postings matching my target roles — Software Engineer, Full-Stack Developer, AI Automation — and has an AI model read and score each listing for actual fit instead of just keyword-matching the title, then logs the qualified ones into a running Excel sheet with company, role, and link. It emails me a daily digest, and for postings that list a recruiter's number, sends a WhatsApp message too, so I can follow up the same evening instead of days later. Built with n8n, Apify, the OpenAI API, Google Sheets, and the WhatsApp Business API, it turned an hour of manual scrolling into a five-minute review every night.",
+    "techs": ["n8n", "Apify", "OpenAI API", "Google Sheets API", "WhatsApp Business API"],
+    "liveUrl": "#",
+    "sourceUrl": "#",
+    "thumbVariant": "pt-4"
+  },
+  {
+    "id": "noshowguard-ai",
+    "emoji": "📅",
+    "badge": "AI Automation",
+    "title": "NoShowGuard",
+    "description": "Clinics and service businesses lose real revenue to no-shows, and calling every client by hand to confirm doesn't scale past a handful of bookings a day. I built NoShowGuard, an automation that sends AI-personalized reminders by SMS and WhatsApp ahead of every appointment, understands free-text replies like 'can we move it to Friday' well enough to reschedule against the real calendar automatically, and flags at-risk bookings early enough for staff to step in. Built with n8n, the OpenAI API, Twilio, NestJS, and PostgreSQL on the same booking data model behind Cartivo and RentHub, it turned a manual reminder chore into a self-running pipeline with a visibly lower no-show rate.",
+    "techs": ["n8n", "OpenAI API", "Twilio", "NestJS", "PostgreSQL"],
+    "liveUrl": "#",
+    "sourceUrl": "#",
+    "thumbVariant": "pt-5"
   }
 ]

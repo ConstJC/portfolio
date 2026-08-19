@@ -21,7 +21,7 @@
     { "icon": "ServerCog", "label": "Backend" },
     { "icon": "Smartphone", "label": "Mobile" }
   ],
-  "techStack": ["Next.js", "NestJS", "React Native", "TypeScript", "C# .NET", "Tailwind CSS"],
+  "techStack": ["Next.js", "NestJS", "React Native", "C# .NET", "Claude Code", "Codex"],
   "quickStats": [
     { "value": "4+", "label": "Projects" },
     { "value": "2yrs+", "label": "Experience" },
