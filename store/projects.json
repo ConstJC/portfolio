@@ -4,7 +4,7 @@
     "emoji": "🛍️",
     "badge": "Marketplace",
     "title": "Cartivo",
-    "description": "Cartivo needed to run product sales, court and service bookings, seller subscriptions, and a rewards wallet on one platform — with real money moving through four different checkout flows at once. I own the Products Management System end-to-end, from ERD to REST API to implementation, and built the full Maya payment integration: webhook handling, idempotency, stale-session watchdogs, and refund reconciliation. The result is a payment layer that stays consistent even when a session drops mid-checkout or a refund has to reconcile across flows.",
+    "description": "Cartivo needed to run product sales, court and service bookings, seller subscriptions, and a rewards wallet on one platform — with real money moving through four different checkout flows at once, backed by a Maya payment integration. As one of the developers on the team, I owned the Products Management System end-to-end, from ERD to REST API to implementation, keeping product data reliable and consistent alongside the bookings, subscriptions, and payment flows running in parallel.",
     "techs": ["NestJS", "Next.js", "Flutter", "PostgreSQL", "Maya API"],
     "liveUrl": "https://cartivo.ph",
     "sourceUrl": "#",
